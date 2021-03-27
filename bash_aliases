@@ -35,4 +35,6 @@ alias gs="git status"
 
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
-alias createsections='ssh np@deuterium.local dotnet ~/Users/np/Applications/CreateSectionsCommandLine/CreateSectionsCommandLine.dll'
+alias createsections='dotnet ~/Applications/CreateSectionsCommandLine/CreateSectionsCommandLine.dll'
+
+alias sage="/Applications/SageMath-9.2.app/sage"
