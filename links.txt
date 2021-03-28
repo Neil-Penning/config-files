@@ -1,0 +1,4 @@
+https://ask.sagemath.org/question/43240/sagemath-and-vscode/
+
+https://doc.sagemath.org/html/en/tutorial/sagetex.html
+	export TEXINPUTS="/Applications/SageMath-9.2.app/Contents/Resources/sage/local/share/texmf//:"
