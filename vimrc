@@ -8,7 +8,9 @@ set wildmenu
 " Add shift+h, shift+l to move between tabs
 nnoremap H gT
 nnoremap L gt
+
+" Set colorscheme
 colorscheme darkblue
 
-" set syntax=latex
-" syntax on
+" Turn Syntax on by default
+syntax on
