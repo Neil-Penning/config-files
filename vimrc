@@ -9,3 +9,6 @@ set wildmenu
 nnoremap H gT
 nnoremap L gt
 colorscheme darkblue
+
+" set syntax=latex
+" syntax on
