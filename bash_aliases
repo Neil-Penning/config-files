@@ -16,15 +16,17 @@ alias g4500="cd $ltx/GGC-STEC-4500-1/"
 alias g1806="cd $ltx/OCW-18-06/"
 
 ################################################################ 2021-1 @ GT
-alias g1331="cd $ltx/GT-CS-1331/"
-alias g3406="cd $ltx/GT-MATH-3406/"
-alias g4317="cd $ltx/GT-MATH-4317/"
+# alias g1331="cd $ltx/GT-CS-1331/"
+alias g4108="cd $ltx/GT-MATH-4108/"
 alias g4699a="cd $ltx/GT-MATH-4699-1/"
 alias g4803a="cd $ltx/GT-MATH-4803-1/"
 
 
-################################################################ Future
-alias g4108="cd $ltx/GT-MATH-4108/"
+################################################################ 2021-2 @ GT
+alias g3012="cd $ltx/GT-MATH-3012/"
+alias g3406="cd $ltx/GT-MATH-3406/"
+alias g4317="cd $ltx/GT-MATH-4317/"
+alias g1331="cd $ltx/GT-CS-1331-O1/"
 
 
 
