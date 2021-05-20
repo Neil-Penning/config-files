@@ -14,3 +14,25 @@ colorscheme darkblue
 
 " Turn Syntax on by default
 syntax on
+
+" https://vi.stackexchange.com/a/423
+" Set tab	to	display as !······
+set list
+set listchars=tab:!·,trail:·
+" Set Space to display
+set listchars=space:·
+
+" show what is being typed.
+set showcmd
+
+"Use spaces everywhere
+set expandtab
+
+"use 4 spaces instead of tabs
+set tabstop=4
+set shiftwidth=4
+
+" Let vim handle auto indenting
+set autoindent
+
+
