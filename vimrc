@@ -18,9 +18,7 @@ syntax on
 " https://vi.stackexchange.com/a/423
 " Set tab	to	display as !······
 set list
-set listchars=tab:!·,trail:·
-" Set Space to display
-set listchars=space:·
+set listchars=tab:!·,trail:·,eol:¬,space:·
 
 " show what is being typed.
 set showcmd
