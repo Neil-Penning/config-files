@@ -33,4 +33,20 @@ set shiftwidth=4
 " Let vim handle auto indenting
 set autoindent
 
+let mapleader = ","
+
+" add box[THING] Leader
+map <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>O<tab>
+map <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>O<tab>
+map <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>O<tab>
+map <leader>bc o\begin{boxConcept}{}<CR>\end{boxConcept}<esc>O<tab>
+map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>O<tab>
+map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>O<tab>
+map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>O<tab>
+
+map <leader>a o\begin{align*}<CR>\end{align*}<esc>O<tab>
+
+map <leader>mo o\[<CR>\]<esc>O<tab>
+
+map <leader>l i\right<ESC>l%i\left<ESC>
 
