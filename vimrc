@@ -53,3 +53,20 @@ map <leader>mo o\[<CR>\]<esc>O<tab><esc>
 
 map <leader>l i\right<ESC>l%i\left<ESC>
 
+map <leader>i2 o\twotwo<CR><tab>{ }{ }<cr>{ }{ }<esc>
+map <leader>i3 o\threethree<CR><tab>{ }{ }{ }<cr>{ }{ }{ }<cr>{ }{ }{ }<esc>
+map <leader>i4 o\fourfour<CR><tab>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr><esc>
+
+" Use s to surrounds something inline
+" Use S to surrounds something outline.
+map <leader>s[ "1c\left[  \right]<esc>F[l"1p
+map <leader>S[ "1c\left[<CR>\right]<esc>k"1p
+
+map <leader>s( "1c\left(  \right)<esc>F(l"1p
+map <leader>S( "1c\left(<CR>\right)<esc>k"1p
+
+map <leader>s{ "1c\left\{  \right\}<esc>F{l"1p
+map <leader>S{ "1c\left\{<CR>\right\}<esc>k"1p
+
+"assumes you are on left side of () or [] 
+map <leader>sb i\left<esc>l%i\right<esc>
