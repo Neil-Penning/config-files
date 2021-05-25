@@ -35,18 +35,21 @@ set autoindent
 
 let mapleader = ","
 
+"Guideline : everything should end with <esc> to emulate pasting.
 " add box[THING] Leader
-map <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>O<tab>
-map <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>O<tab>
-map <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>O<tab>
-map <leader>bc o\begin{boxConcept}{}<CR>\end{boxConcept}<esc>O<tab>
-map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>O<tab>
-map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>O<tab>
-map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>O<tab>
+map <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>O<tab><esc>
+map <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>O<tab><esc>
+map <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>O<tab><esc>
+map <leader>bc o\begin{boxConcept}{}<CR>\end{boxConcept}<esc>O<tab><esc>
+map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>O<tab><esc>
+map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>O<tab><esc>
+map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>O<tab><esc>
 
-map <leader>a o\begin{align*}<CR>\end{align*}<esc>O<tab>
+map <leader>a o\begin{align*}<CR>\end{align*}<esc>O<tab><esc>
+map <leader>ip o\begin{proof}<CR>\end{proof}<esc>O<tab><esc>
+map <leader>ii o\begin{itemize}<CR><tab>\item <CR>\end{itemize}<esc>
 
-map <leader>mo o\[<CR>\]<esc>O<tab>
+map <leader>mo o\[<CR>\]<esc>O<tab><esc>
 
 map <leader>l i\right<ESC>l%i\left<ESC>
 
