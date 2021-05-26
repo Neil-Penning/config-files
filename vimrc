@@ -45,13 +45,11 @@ map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>O<tab><esc>
 map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>O<tab><esc>
 map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>O<tab><esc>
 
-map <leader>a o\begin{align*}<CR>\end{align*}<esc>O<tab><esc>
+map <leader>ia o\begin{align*}<CR>\end{align*}<esc>O<tab><esc>
 map <leader>ip o\begin{proof}<CR>\end{proof}<esc>O<tab><esc>
 map <leader>ii o\begin{itemize}<CR><tab>\item <CR>\end{itemize}<esc>
 
-map <leader>mo o\[<CR>\]<esc>O<tab><esc>
-
-map <leader>l i\right<ESC>l%i\left<ESC>
+map <leader>imo o\[<CR>\]<esc>O<tab><esc>
 
 map <leader>i2 o\twotwo<CR><tab>{ }{ }<cr>{ }{ }<esc>
 map <leader>i3 o\threethree<CR><tab>{ }{ }{ }<cr>{ }{ }{ }<cr>{ }{ }{ }<esc>
@@ -70,3 +68,5 @@ map <leader>S{ "1c\left\{<CR>\right\}<esc>k"1p
 
 "assumes you are on left side of () or [] 
 map <leader>sb i\left<esc>l%i\right<esc>
+
+map <leader>it o\tcblower<esc>
