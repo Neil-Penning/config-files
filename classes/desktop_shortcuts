@@ -1,2 +1,2 @@
 #assumed the file 2021-1 has a list of directories in it.
-cat 2021-1 | xargs -I % sh -c "ln -s $ltx/%/%.code-workspace ~/Desktop/2021-1/%.code-workspace"
+cat ./2021-2 | xargs -I % sh -c "ln -s $ltx/%/%.code-workspace ~/Desktop/2021-2/%.code-workspace"
