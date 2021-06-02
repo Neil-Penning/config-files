@@ -47,7 +47,7 @@ map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>O<tab><esc>
 
 map <leader>ia o\begin{align*}<CR>\end{align*}<esc>O<tab><esc>
 map <leader>ip o\begin{proof}<CR>\end{proof}<esc>O<tab><esc>
-map <leader>ii o\begin{itemize}<CR><tab>\item <CR>\end{itemize}<esc>
+map <leader>ii o\begin{itemize}<CR><CR>\end{itemize}<esc>O<tab>\item<esc>
 
 map <leader>imo o\[<CR>\]<esc>O<tab><esc>
 
