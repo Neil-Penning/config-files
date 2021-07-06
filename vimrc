@@ -87,3 +87,7 @@ map <leader>jgs ciwpublic TYPE get<C-r>"() {<CR><tab>return <C-r>";<CR><C-d>}<CR
 map <leader>js yi(o<tab><C-r>"<esc>:.s/, /\r/g<CR>
 map <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 
+" Set tab colors
+:hi TabLineFill ctermfg=Black ctermbg=Blue
+:hi TabLine ctermfg=Blue ctermbg=Red
+:hi TabLineSel ctermfg=Red ctermbg=Blue
