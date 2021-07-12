@@ -1,4 +1,5 @@
 alias ls="ls -GF"
+alias ld="ls -d */"
 ltx="$HOME/Documents/LaTeX/"
 
 
