@@ -37,17 +37,17 @@ let mapleader = ","
 
 "Guideline : everything should end with <esc> to emulate pasting.
 " add box[THING] Leader
-map <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>
-map <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>
-map <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>
-map <leader>bc o\begin{boxConcept}{}<CR>\end{boxConcept}<esc>
-map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>
-map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>
-map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>
-map <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>
+map <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>k$
+map <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>k$
+map <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>k$
+map <leader>bc o\begin{boxConcept}{}<CR>\end{boxConcept}<esc>k$
+map <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>k$
+map <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>k$
+map <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>k$
+map <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>k$
 
 map <leader>ia o\begin{align*}<CR>\end{align*}<esc>
-map <leader>ir o\begin{array}<CR>\end{array}<esc>
+map <leader>ir o\begin{array}{}<CR>\end{array}<esc>
 map <leader>ip o\begin{proof}<CR>\end{proof}<esc>
 map <leader>ii o\begin{itemize}<CR>\end{itemize}<esc>O<tab>\item <esc>
 map <leader>ie o\begin{enumerate}<CR>\end{enumerate}<esc>O<tab>\item <esc>
@@ -93,3 +93,29 @@ map <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 :hi TabLineFill ctermfg=Black ctermbg=Blue
 :hi TabLine ctermfg=White ctermbg=Red
 :hi TabLineSel ctermfg=White ctermbg=Blue
+
+set wildignore+=*.log
+set wildignore+=*.log
+set wildignore+=*.toc
+set wildignore+=*.gz
+set wildignore+=*.aux
+set wildignore+=*.out
+set wildignore+=*.synctex.gz
+set wildignore+=*.DS_Store
+set wildignore+=*.sagetex.sage
+set wildignore+=*.sagetex.sage.py
+set wildignore+=*.scmd
+set wildignore+=*.sout
+set wildignore+=*sage-plots-for*
+set wildignore+=*_doctest.sage*
+set wildignore+=*.swp
+set wildignore+=*.fdb*
+set wildignore+=*.fls
+set wildignore+=*.synctex*
+set wildignore+=*bbl
+set wildignore+=*bcf
+set wildignore+=*blg
+set wildignore+=*run.xml
+set wildignore+=*temp.tex
+set wildignore+=*.pdf
+set wildignore+=*.sage.py
