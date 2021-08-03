@@ -2,6 +2,10 @@ if [ -f ~/.bash_aliases ];
 then
     . ~/.bash_aliases
 fi
+
+# for tmuxinator
+export EDITOR='vim'
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
