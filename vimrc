@@ -94,6 +94,10 @@ map <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 :hi TabLine ctermfg=White ctermbg=Red
 :hi TabLineSel ctermfg=White ctermbg=Blue
 
+set cursorline " highlight current cursor line.
+
+set confirm
+
 set wildignore+=*.log
 set wildignore+=*.log
 set wildignore+=*.toc
