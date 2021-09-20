@@ -22,3 +22,5 @@ fi
 
 #Add homebrew to path
 export PATH="/opt/homebrew/bin/:$PATH"
+
+set -o vi
