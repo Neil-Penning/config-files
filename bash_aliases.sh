@@ -26,9 +26,13 @@ alias g4803a="cd $ltx/GT-MATH-4803-1/"
 ################################################################ 2021-2 @ GT
 alias g3012="cd $ltx/GT-MATH-3012/"
 alias g3406="cd $ltx/GT-MATH-3406/"
-alias g4317="cd $ltx/GT-MATH-4317/"
+#alias g4317="cd $ltx/GT-MATH-4317/"
 alias g1331="cd $ltx/GT-CS-1331-O1/"
+################################################################ 2021-2 @ GT
 
+alias g4802="cd $ltx/GT-MATH-4802/"
+alias g4317="cd $ltx/GT-MATH-4317-CU/"
+alias g4803b="cd $ltx/GT-MATH-4803-WAN/"
 
 
 alias glagd="git log --all --graph --decorate"
@@ -38,7 +42,7 @@ alias gs="git status"
 
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
-alias createsections='dotnet ~/Applications/CreateSectionsCommandLine/CreateSectionsCommandLine.dll'
+alias createsections='python3 ~/Applications/createsections.py'
 alias z3='~/Applications/z3'
 
 alias sage="/Applications/SageMath-9.2.app/sage"
