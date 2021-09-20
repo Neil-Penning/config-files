@@ -99,7 +99,6 @@ set cursorline " highlight current cursor line.
 set confirm
 
 set wildignore+=*.log
-set wildignore+=*.log
 set wildignore+=*.toc
 set wildignore+=*.gz
 set wildignore+=*.aux
