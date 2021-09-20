@@ -17,7 +17,7 @@ then
     . ~/.bash_prompt
 else
     # otherwise, make the prompt red
-    export PS1="\e[0;31m[\u:\W]\$ \e[0m"
+    export PS1="\e\[[0;31m[\]\u:\W]\$ \e\[[0m\]"
 fi
 
 #Add homebrew to path
