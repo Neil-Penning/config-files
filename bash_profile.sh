@@ -8,9 +8,9 @@ export EDITOR='vim'
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-#https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
 
-#check for .bash_prompt file
+#https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+#check for .bash_prompt file, prefer to use one locally
 if [ -f ~/.bash_prompt ]; 
 then
     # if there is one, run that.
@@ -23,4 +23,5 @@ fi
 #Add homebrew to path
 export PATH="/opt/homebrew/bin/:$PATH"
 
+# change GNU readline input to vi keybindings
 set -o vi
