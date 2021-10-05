@@ -35,7 +35,6 @@ set shiftwidth=4
 
 " Let vim handle auto indenting
 set autoindent
-
 let mapleader = ","
 
 " Set tab colors
@@ -43,10 +42,15 @@ let mapleader = ","
 :hi TabLine ctermfg=White ctermbg=Red
 :hi TabLineSel ctermfg=White ctermbg=Blue
 
+# highlight when searching with /
+# https://vim.fandom.com/wiki/Highlight_all_search_pattern_matches
+set hlsearch
+
 set cursorline " highlight current cursor line.
 
 set confirm
 
+# ignore the following filetypes when using vim's wild tab complete
 set wildignore+=*.log
 set wildignore+=*.toc
 set wildignore+=*.gz
