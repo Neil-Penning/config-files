@@ -35,22 +35,28 @@ set shiftwidth=4
 
 " Let vim handle auto indenting
 set autoindent
+
 let mapleader = ","
+
+"run the current line as a vim command
+noremap <leader>v yy:@"<cr>
+"run the current line as a bash command
+noremap <leader>e :.w !bash<cr>
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue
 :hi TabLine ctermfg=White ctermbg=Red
 :hi TabLineSel ctermfg=White ctermbg=Blue
 
-# highlight when searching with /
-# https://vim.fandom.com/wiki/Highlight_all_search_pattern_matches
+" highlight when searching with /
+" https://vim.fandom.com/wiki/Highlight_all_search_pattern_matches
 set hlsearch
 
 set cursorline " highlight current cursor line.
 
 set confirm
 
-# ignore the following filetypes when using vim's wild tab complete
+" ignore the following filetypes when using vim's wild tab complete
 set wildignore+=*.log
 set wildignore+=*.toc
 set wildignore+=*.gz
