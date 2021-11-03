@@ -9,3 +9,6 @@ brew install tmuxinator
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew install youtube-dl
+
+brew install ffmpeg
+sudo python3 -m pip install medipack
