@@ -1,2 +1,2 @@
-sudo apt-get install tmux tmuxinator youtube-dl ffmpeg transmission
+sudo apt-get install vim tmux tmuxinator youtube-dl ffmpeg transmission 
 
