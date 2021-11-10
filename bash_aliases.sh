@@ -53,4 +53,4 @@ alias mux="tmuxinator"
 
 alias yt-dl="youtube-dl"
 # https://askubuntu.com/a/856913
-alias yt-dl-channel="youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v"
+alias yt-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v'
