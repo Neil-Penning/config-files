@@ -1,6 +1,8 @@
 vim
 (make vim plugin folders)
 
+brew (for mac os)
+
 tmux
     tmux plugin manager -       https://github.com/tmux-plugins/tpm
     tmux-battery -              https://github.com/tmux-plugins/tmux-battery
@@ -14,3 +16,9 @@ youtube-dl                      https://ytdl-org.github.io/youtube-dl/index.html
 transmission                    https://cli-ck.io/transmission-cli-user-guide/
 
 
+sshfd
+
+plex server
+
+dirdiff
+rdiff-backup
