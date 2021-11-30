@@ -17,6 +17,7 @@ transmission                    https://cli-ck.io/transmission-cli-user-guide/
 
 
 sshfd
+nnn
 
 plex server
 
