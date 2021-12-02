@@ -14,3 +14,4 @@ brew install ffmpeg
 sudo python3 -m pip install medipack
 
 brew install nnn
+brew install blueutil
