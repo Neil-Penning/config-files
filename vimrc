@@ -53,6 +53,24 @@ noremap <leader>n :%norm
 noremap <leader>"" :%norm I"<C-v><esc>A"<cr>
 " Surround every line in the file with ''
 noremap <leader>'' :%norm I'<C-v><esc>A'<cr>
+" Change all periods to spaces except the last one (for renaming files)
+noremap <leader>PS :%s /\./ /g<cr>:%norm $Bhr.<cr>
+
+" Surround the current w/Word with a <thing>
+noremap <leader>sw( ciw()<esc>P
+noremap <leader>sW( ciW()<esc>P
+noremap <leader>sw[ ciw[]<esc>P
+noremap <leader>sW[ ciW[]<esc>P
+noremap <leader>sw[ ciw{}<esc>P
+noremap <leader>sW[ ciW{}<esc>P
+noremap <leader>sw< ciw<lt>><esc>P
+noremap <leader>sW< ciW<lt>><esc>P
+noremap <leader>sw' ciw''<esc>P
+noremap <leader>sW' ciW''<esc>P
+noremap <leader>sw" ciw""<esc>P
+noremap <leader>sW" ciW""<esc>P
+
+
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue
