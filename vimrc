@@ -61,8 +61,8 @@ noremap <leader>sw( ciw()<esc>P
 noremap <leader>sW( ciW()<esc>P
 noremap <leader>sw[ ciw[]<esc>P
 noremap <leader>sW[ ciW[]<esc>P
-noremap <leader>sw[ ciw{}<esc>P
-noremap <leader>sW[ ciW{}<esc>P
+noremap <leader>sw{ ciw{}<esc>P
+noremap <leader>sW{ ciW{}<esc>P
 noremap <leader>sw< ciw<lt>><esc>P
 noremap <leader>sW< ciW<lt>><esc>P
 noremap <leader>sw' ciw''<esc>P
