@@ -9,8 +9,8 @@ filetype plugin on
 
 " https://superuser.com/a/1096361
 " Add shift+h, shift+l to move between tabs
-nnoremap H gT
-nnoremap L gt
+nnoremap H :bp<cr>
+nnoremap L :bn<cr>
 
 " Set colorscheme
 colorscheme darkblue
