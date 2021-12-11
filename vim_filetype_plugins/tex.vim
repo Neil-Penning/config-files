@@ -1,3 +1,6 @@
+set spell
+syntax spell toplevel
+
 set mp=pdflatex\ #1\ -interaction=batchmode
 "
 "Guideline : everything should end with <esc> to emulate pasting.
@@ -43,3 +46,6 @@ map <leader>it o\tcblower<esc>
 
 " match begin statement
 map <leader>m yyp^wcwend<esc>O<tab><esc>
+
+" find unfinished
+map <leader>fu /\[UNFINISHED\]
