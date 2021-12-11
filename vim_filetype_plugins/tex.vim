@@ -48,4 +48,4 @@ map <leader>it o\tcblower<esc>
 map <leader>m yyp^wcwend<esc>O<tab><esc>
 
 " find unfinished
-map <leader>fu /\[UNFINISHED\]
+map <leader>fu /\[UNFINISHED\]<cr>
