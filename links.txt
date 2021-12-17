@@ -6,3 +6,6 @@ https://doc.sagemath.org/html/en/tutorial/sagetex.html
 
 https://ottverse.com/ffmpeg-convert-avi-to-mp4-lossless/
     ffmpeg -i input_filename.avi -c:v copy -c:a copy -y output_filename.mp4
+
+# start teleport server
+daemon --name="teleport" sudo teleport start
