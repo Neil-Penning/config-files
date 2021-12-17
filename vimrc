@@ -9,8 +9,8 @@ filetype plugin on
 
 " https://superuser.com/a/1096361
 " Add shift+h, shift+l to move between tabs
-nnoremap H gT
-nnoremap L gt
+nnoremap H :bp<cr>
+nnoremap L :bn<cr>
 
 " Set colorscheme
 colorscheme darkblue
@@ -42,6 +42,35 @@ let mapleader = ","
 noremap <leader>v yy:@"<cr>
 "run the current line as a bash command
 noremap <leader>e :.w !bash<cr>
+"run the whole file in bash
+noremap <leader>E :%w !bash<cr>
+
+" begin a command with :%norm
+noremap <leader>n :%norm 
+
+
+" Surround every line in the file with ""
+noremap <leader>"" :%norm I"<C-v><esc>A"<cr>
+" Surround every line in the file with ''
+noremap <leader>'' :%norm I'<C-v><esc>A'<cr>
+" Change all periods to spaces except the last one (for renaming files)
+noremap <leader>PS :%s /\./ /g<cr>:%norm $Bhr.<cr>
+
+" Surround the current w/Word with a <thing>
+noremap <leader>sw( ciw()<esc>P
+noremap <leader>sW( ciW()<esc>P
+noremap <leader>sw[ ciw[]<esc>P
+noremap <leader>sW[ ciW[]<esc>P
+noremap <leader>sw{ ciw{}<esc>P
+noremap <leader>sW{ ciW{}<esc>P
+noremap <leader>sw< ciw<lt>><esc>P
+noremap <leader>sW< ciW<lt>><esc>P
+noremap <leader>sw' ciw''<esc>P
+noremap <leader>sW' ciW''<esc>P
+noremap <leader>sw" ciw""<esc>P
+noremap <leader>sW" ciW""<esc>P
+
+
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue

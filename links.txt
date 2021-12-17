@@ -9,3 +9,7 @@ https://ottverse.com/ffmpeg-convert-avi-to-mp4-lossless/
 
 # start teleport server
 daemon --name="teleport" sudo teleport start
+
+https://superuser.com/questions/478035/command-line-ssh-restart-mac-osx-mountain-lion
+    sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
