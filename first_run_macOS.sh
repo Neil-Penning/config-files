@@ -15,3 +15,5 @@ sudo python3 -m pip install medipack
 
 brew install nnn
 brew install blueutil
+
+python3 -m pip install bdfr --upgrade
