@@ -13,6 +13,7 @@ ffmpeg
     
 
 youtube-dl                      https://ytdl-org.github.io/youtube-dl/index.html
+gallery-dl                      python3 -m pip install -U gallery-dl
 bdfr                            python3 -m pip install bdfr --upgrade
 transmission                    https://cli-ck.io/transmission-cli-user-guide/
 
