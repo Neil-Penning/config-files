@@ -29,17 +29,36 @@ map <leader>i3 o\threethree<CR><tab>{ }{ }{ }<cr>{ }{ }{ }<cr>{ }{ }{ }<esc>
 
 " Use s to surrounds something inline
 " Use S to surrounds something outline.
-map <leader>s[ "1c\left[  \right]<esc>F[l"1p
-map <leader>S[ "1c\left[<CR>\right]<esc>k"1p
+vnoremap <leader>sm[ "1c\left[  \right]<esc>F[l"1p
+vnoremap <leader>Sm[ "1c\left[<CR>\right]<esc>k"1p
 
-map <leader>s( "1c\left(  \right)<esc>F(l"1p
-map <leader>S( "1c\left(<CR>\right)<esc>k"1p
+vnoremap <leader>sm( "1c\left(  \right)<esc>F(l"1p
+vnoremap <leader>Sm( "1c\left(<CR>\right)<esc>k"1p
 
-map <leader>s{ "1c\left\{  \right\}<esc>F{l"1p
-map <leader>S{ "1c\left\{<CR>\right\}<esc>k"1p
+vnoremap <leader>sm{ "1c\left\{  \right\}<esc>F{l"1p
+vnoremap <leader>Sm{ "1c\left\{<CR>\right\}<esc>k"1p
+
+
+" visual surround 
+vnoremap <leader>smi c<Bslash>(<C-r>"<Bslash>)<esc>l
+vnoremap <leader>smo c<Bslash>(<C-r>"<Bslash>)<esc>l
+" use latex escaped \{ \}
+vnoremap <leader>s\{ c<Bslash>{<C-r>"<Bslash>}<esc>l
+vnoremap <leader>s\( c<Bslash>(<C-r>"<Bslash>)<esc>l
+vnoremap <leader>s\[ c<Bslash>(<C-r>"<Bslash>)<esc>l
+
+
+" surround [w/W]ord math [in/out]line
+noremap <leader>swmi ciw<Bslash>(<Bslash>)<esc>hP
+noremap <leader>sWmi ciW<Bslash>(<Bslash>)<esc>hP
+noremap <leader>swmo ciw<Bslash>[<Bslash>]<esc>hP
+noremap <leader>sWmo ciW<Bslash>[<Bslash>]<esc>hP
+
 
 "assumes you are on left side of () or [] 
-map <leader>sb i\left<esc>l%i\right<esc>
+noremap <leader>sb i<Bslash>left<esc>l%i<Bslash>right<esc>
+vnoremap <leader>sb c<Bslash>left<C-r>"<esc>i<Bslash>right<esc>l
+
 
 map <leader>it o\tcblower<esc>
 

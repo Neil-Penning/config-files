@@ -70,11 +70,15 @@ noremap <leader>sW' ciW''<esc>P
 noremap <leader>sw" ciw""<esc>P
 noremap <leader>sW" ciW""<esc>P
 
-" surround [w/W]ord math [in/out]line
-noremap <leader>swmi ciw<Bslash>(<Bslash>)<esc>hP
-noremap <leader>sWmi ciW<Bslash>(<Bslash>)<esc>hP
-noremap <leader>swmo ciw<Bslash>[<Bslash>]<esc>hP
-noremap <leader>sWmo ciW<Bslash>[<Bslash>]<esc>hP
+" Surround the (s) with a <thing>
+" test ing
+vnoremap <leader>s( c()<esc>P
+vnoremap <leader>s[ c[]<esc>P
+vnoremap <leader>s{ c{}<esc>P
+vnoremap <leader>s< c<lt>><esc>P
+vnoremap <leader>s' c''<esc>P
+vnoremap <leader>s" c""<esc>P
+
 
 
 
