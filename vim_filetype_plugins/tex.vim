@@ -60,8 +60,8 @@ noremap <leader>sb i<Bslash>left<esc>l%i<Bslash>right<esc>
 vnoremap <leader>sb c<Bslash>left<C-r>"<esc>i<Bslash>right<esc>l
 
 
-"make [n]ew [o]perator [c]ommand out of a word
-nnoremap <leader>noc ciw<Bslash>newcommand{<Bslash><C-R>"}{<Bslash>operatorname{<C-R>"}}<esc>
+"make new [o]perator [c]ommand out of a word
+nnoremap <leader>oc ciw<Bslash>newcommand{<Bslash><C-R>"}{<Bslash>operatorname{<C-R>"}}<esc>
 
 map <leader>it o\tcblower<esc>
 
