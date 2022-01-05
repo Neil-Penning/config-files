@@ -6,6 +6,9 @@ fi
 # for tmuxinator
 export EDITOR='vim'
 
+# https://unix.stackexchange.com/questions/408413/change-default-editor-to-vim-for-sudo-systemctl-edit-unit-file
+export SYSTEMD_EDITOR='vim'
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
