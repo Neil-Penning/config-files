@@ -1,3 +1,6 @@
+if grep -Fxq fedora os.txt; then
+  echo "OS detected as fedora" # SomeString was found
+fi
 cp bash_aliases.sh ~/.bash_aliases
 cp bash_profile.sh ~/.bash_profile
 cp init.sage ~/.sage/init.sage
