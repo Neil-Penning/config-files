@@ -14,7 +14,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if grep -Fxq fedora os.txt; then
   echo "OS detected as fedora" # SomeString was found
-  sudo dnf install -y vim nnn gem python3-pip
+  # https://itsfoss.com/install-vlc-fedora/
+  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
+  sudo dnf install -y vim nnn gem python3-pip vlc
   sudo gem install tmuxinator
   pip install medipack bdfr
 fi
