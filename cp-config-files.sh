@@ -1,6 +1,3 @@
-if grep -Fxq fedora os.txt; then
-  echo "OS detected as fedora" # SomeString was found
-fi
 cp bash_aliases.sh ~/.bash_aliases
 cp bash_profile.sh ~/.bash_profile
 cp init.sage ~/.sage/init.sage
@@ -11,3 +8,9 @@ mkdir ~/.vim/ftplugin/
 cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
 
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+if ! [ -f $HOME/.ssh/config ]; 
+then
+    echo "Copying ssh config file"
+    cp ssh_config "$HOME/.ssh/config"
+fi
