@@ -1,15 +1,15 @@
 if ![ -f ./config-files/os.txt ]; 
 then
-    echo "FAILED: set OS type in ~/config-files/os.txt"
+    echo "FAILED: set OS type in $HOME/config-files/os.txt"
     exit 1
 fi
 
 # Always make the following directories
-mkdir ../.vim/
-mkdir ../.vim/ftplugin
-mkdir ../.sage
-mkdir -p ../.tmux/plugins/
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -v $HOME/.vim/
+mkdir -v $HOME/.vim/ftplugin
+mkdir -v $HOME/.sage
+mkdir -v -p $HOME/.tmux/plugins/
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 
 if grep -Fxq fedora os.txt; then
