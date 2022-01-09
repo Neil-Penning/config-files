@@ -62,3 +62,6 @@ alias yt-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v'
 alias mvcol="find . -mindepth 2 -type f -print -exec mv {} . \;"
 
 alias topssh='top -pid $(pgrep ssh | tr "\n" "," | sed "s/,/ -pid /g") 0'
+
+#Only open files on "enter"
+alias nnn='nnn -o'
