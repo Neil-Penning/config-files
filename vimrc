@@ -38,6 +38,7 @@ set autoindent
 
 let mapleader = ","
 
+
 "run the current line as a vim command
 noremap <leader>v yy:@"<cr>
 "run the current line as a bash command
@@ -80,7 +81,12 @@ vnoremap <leader>s' c''<esc>P
 vnoremap <leader>s" c""<esc>P
 
 
+" exit insert mode with jk
+inoremap jk <esc>
 
+" always bring up command mode with :
+nnoremap : q:i
+nnoremap q: :
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue
