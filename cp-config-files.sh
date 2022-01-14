@@ -5,6 +5,7 @@ cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
 rm -r ~/.vim/ftplugin/
 mkdir ~/.vim/ftplugin/
+cp ./filetype.vim $HOME/.vim/
 cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
 
 ~/.tmux/plugins/tpm/bin/install_plugins

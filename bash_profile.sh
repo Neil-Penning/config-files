@@ -11,6 +11,8 @@ export SYSTEMD_EDITOR='vim'
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+export VIM='$HOME/.vim'
+
 
 #https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
 #check for .bash_prompt file, prefer to use one locally
