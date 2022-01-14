@@ -1,0 +1,15 @@
+# /Users/np/.config/tmuxinator/N-semi.yml
+
+name: N-semi
+root: ~/Documents/LaTeX/Notes-Numerical-Semigroups
+
+
+startup_window: run
+
+windows:
+    - editor: vim ./Notes-Numerical-Semigroups.tex ./toc
+    - run:
+        layout: even-horizontal
+        panes:
+            - pdflatex ./Notes-Numerical-Semigroups.tex
+            - git status

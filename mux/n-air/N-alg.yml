@@ -1,0 +1,14 @@
+# /Users/np/.config/tmuxinator/3406hw.yml
+
+name: N-alg
+root: ~/Documents/LaTeX/Notes-Algebra/
+
+startup_window: run
+
+windows:
+    - editor: vim -p ./toc ./Notes-Algebra.tex
+    - run:
+        layout: even-horizontal
+        panes:
+            - pdflatex ./Notes-Algebra.tex 
+            - git status

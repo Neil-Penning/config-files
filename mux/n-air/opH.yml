@@ -1,0 +1,16 @@
+# /Users/np/.config/tmuxinator/opH.yml
+
+name: opH
+root: ~/Documents/LaTeX/Operation_Halmos/Exercises
+
+startup_window: run
+
+windows:
+    # edit ./GT-MATH-4317-CU-HW.tex and all files ending in .tex in order.
+    - editor: vim ./Operation_Halmos.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - pdflatex ./Operation_Halmos.tex && open ./Operation_Halmos.pdf 
+

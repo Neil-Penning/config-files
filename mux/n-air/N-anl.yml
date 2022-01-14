@@ -1,0 +1,15 @@
+# /Users/np/.config/tmuxinator/3406hw.yml
+
+name: N-anl
+root: ~/Documents/LaTeX/Notes-Analysis/
+
+startup_window: run
+
+windows:
+    - editor: vim -p ./toc ./Notes-Analysis.tex
+    - run:
+        layout: even-horizontal
+        panes:
+            - pdflatex ./Notes-Analysis.tex 
+            - git status
+    - files: find . | grep \.tex$

@@ -1,0 +1,18 @@
+# /Users/np/.config/tmuxinator/4317hw.yml
+windows:
+name: ptex
+project_root: "/Users/np/Documents/LaTeX/TestingPenningTeX"
+windows:
+    - M_editor: cd PenningTeX && vim ./PenningMaster.sty
+    - HW_editor: cd Exercises && vim ./Exercises_Test.tex ../PenningTeX/PenningHW.sty $(find tex | grep \.tex\$ | sort | tr "\n" " ") 
+    - HW_run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - cd Exercises && pdflatex ./Exercises_Test.tex && open ./Exercises_Test.pdf 
+    - N_editor: cd Notes && vim ./Notes_Test.tex ../PenningTeX/PenningNotes.sty $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - N_run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - cd Notes && pdflatex ./Notes_Test.tex && open ./Notes_Test.pdf 

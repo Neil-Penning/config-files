@@ -1,0 +1,16 @@
+# /Users/np/.config/tmuxinator/4803.yml
+
+name: 4803hw
+root: ~/Documents/LaTeX/GT-MATH-4803-LOV/Exercises
+
+startup_window: run
+
+windows:
+    # edit ./GT-MATH-4317-CU-HW.tex and all files ending in .tex in order.
+    - editor: vim ./GT-MATH-4803-LOV-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - pdflatex ./GT-MATH-4803-LOV-HW.tex && open ./GT-MATH-4803-LOV-HW.pdf 
+

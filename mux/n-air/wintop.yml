@@ -1,0 +1,16 @@
+# /Users/np/.config/tmuxinator/wintop.yml
+
+name: wintop
+root: ~/Documents/LaTeX/winter_topology/Exercises
+
+startup_window: run
+
+windows:
+    # edit ./GT-MATH-4317-CU-HW.tex and all files ending in .tex in order.
+    - editor: vim ./winter_topology-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - pdflatex ./winter_topology-HW.tex && open ./winter_topology-HW.pdf 
+

@@ -1,0 +1,15 @@
+# /Users/np/.config/tmuxinator/4802hw.yml
+
+name: 4802hw
+root: ~/Documents/LaTeX/GT-MATH-4802/Exercises
+
+startup_window: run
+
+windows:
+    - editor: vim ./GT-MATH-4802-HW.tex
+    - run:
+        layout: even-horizontal
+        panes:
+            - pdflatex ./GT-MATH-4802-HW.tex 
+            - git status
+

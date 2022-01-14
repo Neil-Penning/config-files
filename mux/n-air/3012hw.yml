@@ -1,0 +1,15 @@
+# /Users/np/.config/tmuxinator/3012hw.yml
+
+name: 3012hw
+root: ~/Documents/LaTeX/GT-MATH-3012-D/Exercises
+
+startup_window: run
+
+windows:
+    - editor: vim ./GT-MATH-3012-D-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - pdflatex ./GT-MATH-3012-D-HW.tex && open ./GT-MATH-3012-D-HW.pdf 
+

@@ -1,0 +1,8 @@
+# /Users/np/.config/tmuxinator/config.yml
+name: config
+root: "/Users/np/config-files"
+
+windows:
+- bash:
+    panes:
+    - ls

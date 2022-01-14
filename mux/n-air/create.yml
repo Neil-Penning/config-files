@@ -1,0 +1,15 @@
+# /Users/np/.config/tmuxinator/create.yml
+
+name: create
+root: ~/Documents/LaTeX/createsections
+
+startup_window: run
+
+windows:
+    - editor: ls
+    - run:
+        layout: even-horizontal
+        panes:
+            - ls
+            - git status
+
