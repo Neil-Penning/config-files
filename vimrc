@@ -4,6 +4,8 @@ set wrap!
 set tabpagemax=15
 set wildmenu
 
+" display column number
+set ruler
 
 filetype plugin on 
 
