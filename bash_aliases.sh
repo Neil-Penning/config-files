@@ -19,7 +19,7 @@ alias z3='~/Applications/z3'
 
 alias sage="/Applications/SageMath-9.2.app/sage"
 
-alias checkjava="java -jar $ltx/GT-CS-1331-O1/checkstyle-6.2.2.jar"
+alias checkjava="java -jar $ltx/GT-CS-1332/checkstyle-8.12-all.jar -c $ltx/GT-CS-1332/CS1332-checkstyle.xml"
 
 alias mux="tmuxinator"
 
