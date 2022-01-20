@@ -6,3 +6,5 @@ map <leader>js yi(o<tab><C-r>"<esc>:.s/, /\r/g<CR>
 map <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 
 inoremap ;; <c-o>$;
+
+set colorcolumn=120
