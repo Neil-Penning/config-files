@@ -99,6 +99,10 @@ nnoremap q: :
 " https://vim.fandom.com/wiki/Highlight_all_search_pattern_matches
 set hlsearch
 
+" Change (Matching parenthesis) highlight color
+" https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+
 set cursorline " highlight current cursor line.
 
 set confirm
