@@ -26,6 +26,8 @@ nnoremap <leader>imi o\(<CR>\)<esc>
 inoremap <leader>imi \(  \)<c-o>2h
 inoremap ,; <c-o>$
 
+nnoremap <leader>% 128I%<esc>0
+
 nnoremap <leader>i2 o\twotwo<CR><tab>{ }{ }<cr>{ }{ }<esc>
 nnoremap <leader>i3 o\threethree<CR><tab>{ }{ }{ }<cr>{ }{ }{ }<cr>{ }{ }{ }<esc>
 " map <leader>i4 o\fourfour<CR><tab>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr><esc>
