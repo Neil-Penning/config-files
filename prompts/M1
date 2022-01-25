@@ -1,1 +1,2 @@
 export PS1="\e\[[0;35m[\]\u:\W]\$ \[\e[0m\]"
+tmux set -g status-bg colour13
