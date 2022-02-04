@@ -27,5 +27,10 @@ fi
 #Add homebrew to path
 export PATH="/opt/homebrew/bin/:$PATH"
 
+
+export JUNIT_HOME="/Applications/junit4.10"
+export CLASSPATH=$CLASSPATH.:$JUNIT_HOME/junit-4.10.jar
+export CLASSPATH=$CLASSPATH:/Applications/hamcrest-core-1.3.jar
+
 # change GNU readline input to vi keybindings
 set -o vi

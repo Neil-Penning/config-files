@@ -11,6 +11,9 @@ alias glagd="git log --all --graph --decorate"
 alias glagod="git log --all --graph --decorate --oneline"
 alias gs="git status"
 
+# Use ISO time for ts (timestamp)
+alias ts='ts "%Y-%m-%dT%H:%M:%S"'
+
 
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
@@ -33,3 +36,4 @@ alias topssh='top -pid $(pgrep ssh | tr "\n" "," | sed "s/,/ -pid /g") 0'
 
 #Only open files on "enter"
 alias nnn='nnn -o'
+alias junittest="java org.junit.runner.JUnitCore"
