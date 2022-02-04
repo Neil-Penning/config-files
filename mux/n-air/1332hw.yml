@@ -1,0 +1,10 @@
+# /Users/np/.config/tmuxinator/1332hw.yml
+
+name: 1332hw
+root: ~/Documents/LaTeX/GT-CS-1332/
+
+windows:
+  - editor:
+      panes:
+        - vim
+  - git: git status

@@ -7,10 +7,17 @@ startup_window: run
 
 windows:
     # edit ./GT-MATH-4317-CU-HW.tex and all files ending in .tex in order.
-    - editor: vim ./GT-MATH-4803-LOV-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    # - editor: vim ./GT-MATH-4803-LOV-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - editor: vim ./GT-MATH-4803-LOV-HW.tex $(find tex -maxdepth 1 | grep \.tex$ | grep -v raw | sort) $(find tex | grep \.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort | tr "\n" " ")
     - run:
         layout: even-horizontal
         panes:
             - git status
             - pdflatex ./GT-MATH-4803-LOV-HW.tex && open ./GT-MATH-4803-LOV-HW.pdf 
-
+    - pbl: vim Problems.pbl
+    - work:
+        layout: even-horizontal
+        panes:
+            - ls
+            - sage
+    - img: cd img && open . && nnn -o

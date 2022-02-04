@@ -6,10 +6,12 @@ root: ~/Documents/LaTeX/GT-MATH-3012-D/Exercises
 startup_window: run
 
 windows:
-    - editor: vim ./GT-MATH-3012-D-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    #- editor: vim ./GT-MATH-3012-D-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
+    - editor: vim ./GT-MATH-3012-D-HW.tex $(find tex -maxdepth 1 | grep \.tex$ | grep -v raw | sort) $(find tex | grep \.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort | tr "\n" " ")
     - run:
         layout: even-horizontal
         panes:
             - git status
             - pdflatex ./GT-MATH-3012-D-HW.tex && open ./GT-MATH-3012-D-HW.pdf 
-
+    - pbl: vim Problems.pbl
+    - work: cd work && sage -n jupyter .

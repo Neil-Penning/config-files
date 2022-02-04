@@ -13,4 +13,5 @@ windows:
         panes:
             - git status
             - pdflatex ./Operation_Halmos.tex && open ./Operation_Halmos.pdf 
+    - pbl: vim Problems.pbl
 
