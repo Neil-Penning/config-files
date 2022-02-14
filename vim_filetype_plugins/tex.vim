@@ -79,3 +79,9 @@ nnoremap <leader>m yyp^wcwend<esc>O<tab><esc>
 
 " find unfinished
 nnoremap <leader>fu /\[UNFINISHED\]<cr>
+
+"change math outline to align*
+nnoremap <leader>coa ?\\[<cr>ddd/\\]<cr>cc\begin{align*}<cr>\end{align*}<esc>"2P
+
+" changes math inline to math outline
+nnoremap <leader>cio ?\\(<cr>d/\\)<cr>xs<cr>\[<cr>\]<cr><esc>kO<C-r>1<esc>^xx
