@@ -43,6 +43,9 @@ vnoremap <leader>Sm( "1c\left(<CR>\right)<esc>k"1p
 vnoremap <leader>sm{ "1c\left\{  \right\}<esc>F{l"1p
 vnoremap <leader>Sm{ "1c\left\{<CR>\right\}<esc>k"1p
 
+vnoremap <leader>sma "1c\abs{  }<esc>F{l"1p
+vnoremap <leader>Sma "1c\abs{<CR>}<esc>k"1p
+
 
 " visual surround 
 vnoremap <leader>smi c<Bslash>(<C-r>"<Bslash>)<esc>l
