@@ -4,6 +4,9 @@ set wrap!
 set tabpagemax=15
 set wildmenu
 
+" keep 10 lines at top and bottom
+set scrolloff=10
+
 " display column number
 set ruler
 
@@ -38,7 +41,7 @@ set shiftwidth=4
 " Let vim handle auto indenting
 set autoindent
 
-let mapleader = ","
+"let mapleader = ","
 
 
 "run the current line as a vim command
