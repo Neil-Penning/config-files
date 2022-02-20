@@ -66,6 +66,8 @@ noremap <leader>sWmo ciW<Bslash>[<Bslash>]<esc>hP
 "assumes you are on left side of () or [] 
 noremap <leader>sb i<Bslash>left<esc>l%i<Bslash>right<esc>
 vnoremap <leader>sb c<Bslash>left<C-r>"<esc>i<Bslash>right<esc>l
+"undos <leader>sb
+"nnoremap <leader>sb 
 
 
 "make new [o]perator [c]ommand out of a word
@@ -81,7 +83,17 @@ nnoremap <leader>m yyp^wcwend<esc>O<tab><esc>
 nnoremap <leader>fu /\[UNFINISHED\]<cr>
 
 "change math outline to align*
-nnoremap <leader>coa ?\\[<cr>ddd/\\]<cr>cc\begin{align*}<cr>\end{align*}<esc>"2P
+nnoremap <leader>coa ?\\[<cr>c2l\begin{align*}<esc>/\\]<cr>c2l\end{align*}<esc>
 
 " changes math inline to math outline
 nnoremap <leader>cio ?\\(<cr>d/\\)<cr>xs<cr>\[<cr>\]<cr><esc>kO<C-r>1<esc>^xx
+
+
+inoremap <leader>imo <cr>\[<cr>\]<C-o>O<tab>
+inoremap <leader>imi <cr>\(<cr>\)<C-o>O<tab>
+inoremap <leader>ima <cr>\begin{align*}<cr>\end{align*}<C-o>O<tab>
+
+"Exit math inline and exit math outline
+inoremap <leader>emi <c-o>/\\)<cr><c-o>$
+inoremap <leader>emo <c-o>/\\]<cr><c-o>$
+inoremap <leader>ema <c-o>/\\align<cr><c-o>$

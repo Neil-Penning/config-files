@@ -18,7 +18,7 @@ nnoremap H :bp<cr>
 nnoremap L :bn<cr>
 
 " Set colorscheme
-colorscheme darkblue
+"colorscheme darkblue
 
 " Turn Syntax on by default
 syntax on
@@ -84,6 +84,14 @@ vnoremap <leader>s{ c{}<esc>P
 vnoremap <leader>s< c<lt>><esc>P
 vnoremap <leader>s' c''<esc>P
 vnoremap <leader>s" c""<esc>P
+
+" Evaluate selected string with expression register, paste result.
+" (2150*8989)
+vnoremap <leader>= s<C-r>=<C-r>"<cr><esc>
+
+" evaluate selected string using sage; replace selected text with output.
+"vnoremap <leader>rs "ss<C-r>=system('/Applications/SageMath-9.2.app/sage -c "print(<C-r>s)"')<cr>
+" call writefile(getreg('a',1,1), "./.tmp.sage") | put =system('/Applications/SageMath-9.2.app/sage .tmp.sage && rm .tmp.sage')
 
 
 " exit insert mode with jk
