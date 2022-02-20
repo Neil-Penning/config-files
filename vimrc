@@ -91,8 +91,7 @@ vnoremap <leader>= s<C-r>=<C-r>"<cr><esc>
 
 " evaluate selected string using sage; replace selected text with output.
 "vnoremap <leader>rs "ss<C-r>=system('/Applications/SageMath-9.2.app/sage -c "print(<C-r>s)"')<cr>
-" call writefile(getreg('a',1,1), "./.tmp.sage") | put =system('/Applications/SageMath-9.2.app/sage .tmp.sage && rm .tmp.sage')
-
+vnoremap <leader>rs "ax:call writefile(getreg('a',1,1), "./.tmp.sage") <bar> put =system('/Applications/SageMath-9.2.app/sage .tmp.sage && rm .tmp.sage && rm .tmp.sage.py')<cr>
 
 " exit insert mode with jk
 inoremap jk <esc>
