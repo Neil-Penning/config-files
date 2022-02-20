@@ -16,9 +16,12 @@ if grep -Fxq fedora os.txt; then
   echo "OS detected as fedora" # SomeString was found
   # https://itsfoss.com/install-vlc-fedora/
   sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
-  sudo dnf install -y vim nnn gem python3-pip vlc
+  sudo dnf install -y vim nnn gem python3-pip vlc youtube-dl
   sudo gem install tmuxinator
   pip install medipack bdfr
+
+
+  yum-config-manager --add-repo https://rpm.releases.teleport.dev/teleport.repo
 fi
 
 if grep -Fxq macos os.txt; then
