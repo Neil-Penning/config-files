@@ -5,6 +5,9 @@ map <leader>js yi(o<tab><C-r>"<esc>:.s/, /\r/g<CR>
 " Run ,jp when hovering on one of the fields.
 map <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 
+inoremap <leader>} <cr><C-D>}<esc>kA
+
+
 inoremap ;; <c-o>$;
 
 set colorcolumn=120
