@@ -96,9 +96,8 @@ vnoremap <leader>rs "ax:call writefile(getreg('a',1,1), "./.tmp.sage") <bar> put
 " exit insert mode with jk
 inoremap jk <esc>
 
-" always bring up command mode with :
-nnoremap : q:i
-nnoremap q: :
+" use q; for q: - (removes shift)
+nnoremap q; q:
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue
