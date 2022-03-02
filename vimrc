@@ -4,8 +4,8 @@ set wrap!
 set tabpagemax=15
 set wildmenu
 
-" keep 10 lines at top and bottom
-set scrolloff=10
+" keep 3 lines at top and bottom
+set scrolloff=3
 
 " display column number
 set ruler
@@ -98,6 +98,8 @@ inoremap jk <esc>
 
 " use q; for q: - (removes shift)
 nnoremap q; q:
+" if you're in commandline mode, ;; runs <C-f> to go into history mode
+cnoremap ;; <C-f>
 
 " Set tab colors
 :hi TabLineFill ctermfg=Black ctermbg=Blue
