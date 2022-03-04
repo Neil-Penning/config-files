@@ -54,6 +54,8 @@ noremap <leader>E :%w !bash<cr>
 " begin a command with :%norm
 noremap <leader>n :%norm 
 
+"add a newline after every comma on this line
+nnoremap <leader>, :.s /, /,\r/g<cr>
 
 " Surround every line in the file with ""
 noremap <leader>"" :%norm I"<C-v><esc>A"<cr>
