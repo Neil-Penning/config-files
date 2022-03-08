@@ -7,7 +7,8 @@ startup_window: run
 
 windows:
     #- editor: vim ./GT-MATH-3012-D-HW.tex $(find tex | grep \.tex\$ | sort | tr "\n" " ")
-    - editor: vim ./GT-MATH-3012-D-HW.tex $(find tex -maxdepth 1 | grep \.tex$ | grep -v raw | sort) $(find tex | grep \.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort | tr "\n" " ")
+    #- editor: vim ./GT-MATH-3012-D-HW.tex $({find tex -maxdepth 1 & find opt_tex -maxdepth 1 }| grep \.tex$ | grep -v raw | sort) $({find tex & find opt_tex;} | grep \.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort | tr "\n" " ")
+    - editor: vim ./GT-MATH-3012-D-HW.tex $({ find tex -maxdepth 1 && find opt_tex -maxdepth 1; } | grep \\.tex$ | grep -v raw | sort | tr "\n" " ") $({ find tex && find opt_tex; } | grep \\.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort | tr "\n" " ")
     - run:
         layout: even-horizontal
         panes:
