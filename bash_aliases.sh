@@ -37,3 +37,9 @@ alias topssh='top -pid $(pgrep ssh | tr "\n" "," | sed "s/,/ -pid /g") 0'
 #Only open files on "enter"
 alias nnn='nnn -o'
 alias junittest="java org.junit.runner.JUnitCore"
+
+# If tmux is running, go to client base
+# If tmux is not running
+#   attach base
+#   otherwise, make a new session called base
+alias tb="tmux switch-client -t base || tmux attach-session -t base || tmux new-session -s base"
