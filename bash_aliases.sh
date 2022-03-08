@@ -38,8 +38,20 @@ alias topssh='top -pid $(pgrep ssh | tr "\n" "," | sed "s/,/ -pid /g") 0'
 alias nnn='nnn -o'
 alias junittest="java org.junit.runner.JUnitCore"
 
-# If tmux is running, go to client base
-# If tmux is not running
-#   attach base
-#   otherwise, make a new session called base
-alias tb="tmux switch-client -t base || tmux attach-session -t base || tmux new-session -s base"
+# switch to a session called "base"; wherever you are
+alias tb="if [ ! -z \"$TMUX\" ]; then tmux has-session -t base || tmux new-session -d -s base; tmux switch-client -t base; else tmux new-session -A -s base; fi"
+# # Breakdown:
+# if [ ! -z \"$TMUX\" ]; then 
+#     # TMUX client is running
+#     # If there is no session called base, create one.
+#     tmux has-session -t base || tmux new-session -d -s base;
+#     # Change to session named base
+#     tmux switch-client -t base;
+# else 
+#     # TMUX client is not running
+#     # Create a new session called base
+#     # The flag (-A) says if base already exists, attach to it.
+#     tmux new-session -A -s base;
+# fi
+
+
