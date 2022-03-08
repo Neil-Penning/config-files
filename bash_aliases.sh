@@ -39,9 +39,9 @@ alias nnn='nnn -o'
 alias junittest="java org.junit.runner.JUnitCore"
 
 # switch to a session called "base"; wherever you are
-alias tb="if [ ! -z \"$TMUX\" ]; then tmux has-session -t base || tmux new-session -d -s base; tmux switch-client -t base; else tmux new-session -A -s base; fi"
+alias tb="if [ -n \"$TMUX\" ]; then tmux has-session -t base || tmux new-session -d -s base; tmux switch-client -t base; else tmux new-session -A -s base; fi"
 # # Breakdown:
-# if [ ! -z \"$TMUX\" ]; then 
+# if [ -n \"$TMUX\" ]; then 
 #     # TMUX client is running
 #     # If there is no session called base, create one.
 #     tmux has-session -t base || tmux new-session -d -s base;
