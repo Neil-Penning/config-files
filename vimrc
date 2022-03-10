@@ -120,6 +120,9 @@ set cursorline " highlight current cursor line.
 
 set confirm
 
+# Highlight search terms as they're typed.
+set incsearch
+
 " ignore the following filetypes when using vim's wild tab complete
 set wildignore+=*.log
 set wildignore+=*.toc
