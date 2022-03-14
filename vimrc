@@ -17,6 +17,10 @@ filetype plugin on
 nnoremap H :bp<cr>
 nnoremap L :bn<cr>
 
+" Use Y for y$ instead of yy
+" This reflects how C and D work.
+nnoremap Y y$
+
 " Set colorscheme
 "colorscheme darkblue
 
