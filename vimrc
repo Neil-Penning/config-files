@@ -4,6 +4,9 @@ set wrap!
 set tabpagemax=15
 set wildmenu
 
+set t_Co=256
+
+
 " keep 3 lines at top and bottom
 set scrolloff=3
 
