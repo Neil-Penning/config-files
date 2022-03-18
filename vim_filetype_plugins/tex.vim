@@ -17,14 +17,15 @@ nnoremap <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>k$
 nnoremap <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>k$
 nnoremap <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>k$
 
-hi! Definition  ctermbg=green   ctermfg=black   guibg=green
-hi! Theorem     ctermbg=yellow  ctermfg=black   guibg=yellow
-hi! Example     ctermbg=097     ctermfg=black   guibg=purple
-hi! Concept     ctermbg=blue    ctermfg=black   guibg=red
-hi! Problem     ctermbg=red     ctermfg=black   guibg=red
-hi! TODO        ctermbg=013     ctermfg=black   guibg=pink
-hi! Note        ctermbg=grey    ctermfg=black   guibg=grey
-hi! Quote       ctermbg=180     ctermfg=black   guibg=red
+"   Name        ctermbg=xxx     ctermfg=black
+hi! Definition  ctermbg=green   ctermfg=black
+hi! Theorem     ctermbg=yellow  ctermfg=black
+hi! Example     ctermbg=097     ctermfg=black
+hi! Concept     ctermbg=blue    ctermfg=black
+hi! Problem     ctermbg=red     ctermfg=black
+hi! TODO        ctermbg=013     ctermfg=black
+hi! Note        ctermbg=grey    ctermfg=black
+hi! Quote       ctermbg=180     ctermfg=black
 
 let m = matchadd("Definition",   ".*boxDefinition.*")
 let m = matchadd("Theorem"   ,   ".*boxTheorem.*")
@@ -34,6 +35,21 @@ let m = matchadd("Problem"   ,   ".*boxProblem.*")
 let m = matchadd("TODO"      ,   ".*boxTODO.*")
 let m = matchadd("Note"      ,   ".*boxNote.*")
 let m = matchadd("Quote"     ,   ".*boxQuote.*")
+
+"   Name        ctermbg=xxx     ctermfg=black
+hi! NewProblem  ctermbg=021     ctermfg=black
+hi! Unfinished  ctermbg=013     ctermfg=black
+
+let m = matchadd("NewProblem"     ,   "/.*test.*/")
+
+let m = matchadd("NewProblem"     ,   ".*newProblem.*")
+let m = matchadd("NewProblem"     ,   ".*newInlineProblem.*")
+let m = matchadd("Unfinished"     ,   ".*UNFINISHED.*")
+"
+
+" \begin{newProblem}
+" \begin{newInlineProblem}
+" \begin{ewInlineProblem}[UNFINISHED]
 
 
 nnoremap <leader>ir o\begin{array}{}<CR>\end{array}<esc>
@@ -105,11 +121,11 @@ nnoremap <leader>coa ?\\[<cr>c2l\begin{align*}<esc>/\\]<cr>c2l\end{align*}<esc>
 " changes math inline to math outline
 nnoremap <leader>cio ?\\(<cr>d/\\)<cr>xs<cr>\[<cr>\]<cr><esc>kO<C-r>1<esc>^xx
 
-# Normal mode math commands
+" Normal mode math commands
 nnoremap <leader>imo o\[<CR>\]<esc>
 nnoremap <leader>imi o\(<CR>\)<esc>
 nnoremap <leader>ima o\begin{align*}<CR>\end{align*}<esc>
-# insert mode math commands
+" insert mode math commands
 inoremap <leader>imi \(  \)<c-o>2h
 inoremap <leader>imo <cr>\[<cr>\]<C-o>O<tab>
 inoremap <leader>imi <cr>\(<cr>\)<C-o>O<tab>
