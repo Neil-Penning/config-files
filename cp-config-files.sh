@@ -5,6 +5,17 @@ cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
 rm -r ~/.vim/ftplugin/
 mkdir ~/.vim/ftplugin/
+
+# make vim syntax directory if it doesn't exist
+! [ -d $HOME/.vim/syntax ] || mkdir -p $HOME/.vim/syntax
+# copy syntax file from vim-tex-syntax if submodule is included
+if [ -e ./vim-tex-syntax/syntax/tex.vim ];
+then
+    cp ./vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax;
+else
+    echo "./vim-tex-syntax does not exist; pull submodule?"
+fi
+
 cp ./filetype.vim $HOME/.vim/
 cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
 
@@ -12,6 +23,6 @@ cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
 
 if ! [ -f $HOME/.ssh/config ]; 
 then
-    echo "Copying ssh config file"
+    echo "Copying ssh config file";
     cp ssh_config "$HOME/.ssh/config"
 fi
