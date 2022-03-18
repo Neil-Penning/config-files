@@ -7,6 +7,8 @@ nnoremap <leader>jp ^dwciwthis.<C-r>" = <C-R>";<esc>
 
 inoremap <leader>} <cr><C-D>}<esc>kA
 
+nnoremap <leader>zf 0wzf%j0f{zf%
+
 
 inoremap ;; <c-o>$;
 
