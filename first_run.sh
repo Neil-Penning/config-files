@@ -4,10 +4,7 @@ then
     exit 1
 fi
 
-# Always make the following directories
-mkdir -v $HOME/.vim/
-mkdir -v $HOME/.vim/ftplugin
-mkdir -v $HOME/.sage
+#download tmux plugin manager
 mkdir -v -p $HOME/.tmux/plugins/
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 

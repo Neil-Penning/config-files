@@ -1,3 +1,8 @@
+if ![ -f ./config-files/os.txt ]; 
+then
+    echo "REMINDER: you should set OS type in $HOME/config-files/os.txt"
+fi
+
 #Bash files
     cp bash_aliases.sh ~/.bash_aliases
     cp bash_profile.sh ~/.bash_profile
