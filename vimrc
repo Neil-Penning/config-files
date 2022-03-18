@@ -6,6 +6,9 @@ set wildmenu
 
 set t_Co=256
 
+nnoremap <leader>sg :let s = synID(line('.'), col('.'), 1) \| echo synIDattr(s, 'name') . ' -<lt> ' . synIDattr(synIDtrans(s), 'name')<CR>
+nnoremap <leader>sr :syn off<CR>:syn on<CR>
+
 
 " keep 3 lines at top and bottom
 set scrolloff=3
