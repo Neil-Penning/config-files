@@ -2,6 +2,9 @@ set spell
 syntax spell toplevel
 
 set mp=pdflatex\ #1\ -interaction=batchmode
+
+iabbrev detla delta
+
 "
 "Guideline : everything should end with <esc> to emulate pasting.
 " add box[THING] Leader
@@ -14,17 +17,31 @@ nnoremap <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>k$
 nnoremap <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>k$
 nnoremap <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>k$
 
-nnoremap <leader>ia o\begin{align*}<CR>\end{align*}<esc>
+hi! Definition  ctermbg=green   ctermfg=black   guibg=green
+hi! Theorem     ctermbg=yellow  ctermfg=black   guibg=yellow
+hi! Example     ctermbg=097     ctermfg=black   guibg=purple
+hi! Concept     ctermbg=blue    ctermfg=black   guibg=red
+hi! Problem     ctermbg=red     ctermfg=black   guibg=red
+hi! TODO        ctermbg=013     ctermfg=black   guibg=pink
+hi! Note        ctermbg=grey    ctermfg=black   guibg=grey
+hi! Quote       ctermbg=180     ctermfg=black   guibg=red
+
+let m = matchadd("Definition",   ".*boxDefinition.*")
+let m = matchadd("Theorem"   ,   ".*boxTheorem.*")
+let m = matchadd("Example"   ,   ".*boxExample.*")
+let m = matchadd("Concept"   ,   ".*boxConcept.*")
+let m = matchadd("Problem"   ,   ".*boxProblem.*")
+let m = matchadd("TODO"      ,   ".*boxTODO.*")
+let m = matchadd("Note"      ,   ".*boxNote.*")
+let m = matchadd("Quote"     ,   ".*boxQuote.*")
+
+
 nnoremap <leader>ir o\begin{array}{}<CR>\end{array}<esc>
 nnoremap <leader>ip o\begin{proof}<CR>\end{proof}<esc>
 nnoremap <leader>ii o\begin{itemize}<CR>\end{itemize}<esc>O<tab>\item <esc>
 nnoremap <leader>ie o\begin{enumerate}<CR>\end{enumerate}<esc>O<tab>\item <esc>
 
-nnoremap <leader>imo o\[<CR>\]<esc>
-nnoremap <leader>imi o\(<CR>\)<esc>
-
-inoremap <leader>imi \(  \)<c-o>2h
-inoremap ,; <c-o>$
+inoremap <leader>; <c-o>$
 
 nnoremap <leader>% 128I%<esc>0
 
@@ -88,10 +105,16 @@ nnoremap <leader>coa ?\\[<cr>c2l\begin{align*}<esc>/\\]<cr>c2l\end{align*}<esc>
 " changes math inline to math outline
 nnoremap <leader>cio ?\\(<cr>d/\\)<cr>xs<cr>\[<cr>\]<cr><esc>kO<C-r>1<esc>^xx
 
-
+# Normal mode math commands
+nnoremap <leader>imo o\[<CR>\]<esc>
+nnoremap <leader>imi o\(<CR>\)<esc>
+nnoremap <leader>ima o\begin{align*}<CR>\end{align*}<esc>
+# insert mode math commands
+inoremap <leader>imi \(  \)<c-o>2h
 inoremap <leader>imo <cr>\[<cr>\]<C-o>O<tab>
 inoremap <leader>imi <cr>\(<cr>\)<C-o>O<tab>
 inoremap <leader>ima <cr>\begin{align*}<cr>\end{align*}<C-o>O<tab>
+nnoremap <leader>ia o\begin{align*}<CR>\end{align*}<esc>
 
 "Exit math inline and exit math outline
 inoremap <leader>emi <c-o>/\\)<cr><c-o>$
