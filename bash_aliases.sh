@@ -1,7 +1,7 @@
-if grep -Fxq macos $HOME/config-files/os.txt; then
+if grep -Fxq macos $HOME/config-files/.os.txt; then
     alias ls="ls -GF"
 fi
-if grep -xq 'fedora\|rpi' $HOME/config-files/os.txt; then
+if grep -xq 'fedora\|rpi' $HOME/config-files/.os.txt; then
     alias ls="ls --color"
 fi
 ltx="$HOME/Documents/LaTeX/"

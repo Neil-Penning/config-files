@@ -1,7 +1,9 @@
-if ![ -f ./config-files/os.txt ]; 
+if ! [ -f ./os.txt ]; 
 then
-    echo "FAILED: set OS type in $HOME/config-files/os.txt"
-    exit 1
+    echo "FAILED: set OS type in $HOME/config-files/os.txt";
+    exit 1;
+else
+    cp ./os.txt $HOME/.os.txt
 fi
 
 #Bash files
