@@ -1,6 +1,7 @@
 if ![ -f ./config-files/os.txt ]; 
 then
-    echo "REMINDER: you should set OS type in $HOME/config-files/os.txt"
+    echo "FAILED: set OS type in $HOME/config-files/os.txt"
+    exit 1
 fi
 
 #Bash files
