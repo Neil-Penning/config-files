@@ -1,3 +1,0 @@
-[submodule "vim-tex-syntax"]
-	path = vim-tex-syntax
-	url = https://github.com/gi1242/vim-tex-syntax
