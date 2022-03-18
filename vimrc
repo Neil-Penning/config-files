@@ -165,13 +165,13 @@ while num >= 0
     exec 'syn match col_'.num.' "cterm0\{0,2\}'.num.'" containedIn=ALL'
     let num = num - 1
 endwhile
-cterm0039cterm0039cterm0039cterm0039
-cterm0039cterm0039cterm0039cterm0039
-cterm0218cterm0218cterm0218cterm0218
-cterm0218cterm0218cterm0218cterm0218
-cterm0015cterm0015cterm0015cterm0015
-cterm0015cterm0015cterm0015cterm0015
-cterm0218cterm0218cterm0218cterm0218
-cterm0218cterm0218cterm0218cterm0218
-cterm0039cterm0039cterm0039cterm0039
-cterm0039cterm0039cterm0039cterm0039
+" cterm0039cterm0039cterm0039cterm0039
+" cterm0039cterm0039cterm0039cterm0039
+" cterm0218cterm0218cterm0218cterm0218
+" cterm0218cterm0218cterm0218cterm0218
+" cterm0015cterm0015cterm0015cterm0015
+" cterm0015cterm0015cterm0015cterm0015
+" cterm0218cterm0218cterm0218cterm0218
+" cterm0218cterm0218cterm0218cterm0218
+" cterm0039cterm0039cterm0039cterm0039
+" cterm0039cterm0039cterm0039cterm0039

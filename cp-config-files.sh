@@ -1,25 +1,32 @@
-cp bash_aliases.sh ~/.bash_aliases
-cp bash_profile.sh ~/.bash_profile
-cp init.sage ~/.sage/init.sage
-cp vimrc ~/.vimrc
-cp tmux.conf ~/.tmux.conf
-rm -r ~/.vim/ftplugin/
-mkdir ~/.vim/ftplugin/
+#Bash files
+    cp bash_aliases.sh ~/.bash_aliases
+    cp bash_profile.sh ~/.bash_profile
 
-# make vim syntax directory if it doesn't exist
-! [ -d $HOME/.vim/syntax ] || mkdir -p $HOME/.vim/syntax
-# copy syntax file from vim-tex-syntax if submodule is included
-if [ -e ./vim-tex-syntax/syntax/tex.vim ];
-then
-    cp ./vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax;
-else
-    echo "./vim-tex-syntax does not exist; pull submodule?"
-fi
+# Sage
+    [ -d $HOME/.sage/ ] || (mkdir -p $HOME/.sage/; echo "made directory $HOME/.sage")
+    cp init.sage ~/.sage/init.sage
+    [ -d $HOME/.sage/ipython-5.0.0/profile_default/ ] || (mkdir -p $HOME/.sage/ipython-5.0.0/profile_default/; echo "made directory $HOME/.sage/ipython-5.0.0/profile_default/")
+    cp ./ipython_config.py $HOME/.sage/ipython-5.0.0/profile_default/
 
-cp ./filetype.vim $HOME/.vim/
-cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
+# Vim 
+    cp vimrc ~/.vimrc
+    [ -d $HOME/.vim/ftplugin ] || (mkdir -p $HOME/.vim/ftplugin; echo "made directory $HOME/.vim/ftplugin")
+    cp ./filetype.vim $HOME/.vim/
+    cp ./vim_filetype_plugins/* ~/.vim/ftplugin/
+    # make vim syntax directory if it doesn't exist
+    [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")
+    # copy syntax file from vim-tex-syntax if submodule is included
+    if [ -e ./vim-tex-syntax/syntax/tex.vim ];
+    then
+        cp ./vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax;
+    else
+        echo "./vim-tex-syntax does not exist"
+    fi
 
-~/.tmux/plugins/tpm/bin/install_plugins
+
+# Tmux
+    cp tmux.conf ~/.tmux.conf
+    ~/.tmux/plugins/tpm/bin/install_plugins
 
 if ! [ -f $HOME/.ssh/config ]; 
 then
