@@ -52,38 +52,40 @@ set autoindent
 
 
 "run the current line as a vim command
-noremap <leader>v yy:@"<cr>
+nnoremap <leader>v yy:@"<cr>
+"run the current file as a vim script
+nnoremap <leader>V :so %<cr>
 "run the current line as a bash command
-noremap <leader>e :.w !bash<cr>
+nnoremap <leader>e :.w !bash<cr>
 "run the whole file in bash
-noremap <leader>E :%w !bash<cr>
+nnoremap <leader>E :%w !bash<cr>
 
 " begin a command with :%norm
-noremap <leader>n :%norm 
+nnoremap <leader>n :%norm 
 
 "add a newline after every comma on this line
 nnoremap <leader>, :.s /, /,\r/g<cr>
 
 " Surround every line in the file with ""
-noremap <leader>"" :%norm I"<C-v><esc>A"<cr>
+nnoremap <leader>"" :%norm I"<C-v><esc>A"<cr>
 " Surround every line in the file with ''
-noremap <leader>'' :%norm I'<C-v><esc>A'<cr>
+nnoremap <leader>'' :%norm I'<C-v><esc>A'<cr>
 " Change all periods to spaces except the last one (for renaming files)
-noremap <leader>PS :%s /\./ /g<cr>:%norm $Bhr.<cr>
+nnoremap <leader>PS :%s /\./ /g<cr>:%norm $Bhr.<cr>
 
 " Surround the current w/Word with a <thing>
-noremap <leader>sw( ciw()<esc>P
-noremap <leader>sW( ciW()<esc>P
-noremap <leader>sw[ ciw[]<esc>P
-noremap <leader>sW[ ciW[]<esc>P
-noremap <leader>sw{ ciw{}<esc>P
-noremap <leader>sW{ ciW{}<esc>P
-noremap <leader>sw< ciw<lt>><esc>P
-noremap <leader>sW< ciW<lt>><esc>P
-noremap <leader>sw' ciw''<esc>P
-noremap <leader>sW' ciW''<esc>P
-noremap <leader>sw" ciw""<esc>P
-noremap <leader>sW" ciW""<esc>P
+nnoremap <leader>sw( ciw()<esc>P
+nnoremap <leader>sW( ciW()<esc>P
+nnoremap <leader>sw[ ciw[]<esc>P
+nnoremap <leader>sW[ ciW[]<esc>P
+nnoremap <leader>sw{ ciw{}<esc>P
+nnoremap <leader>sW{ ciW{}<esc>P
+nnoremap <leader>sw< ciw<lt>><esc>P
+nnoremap <leader>sW< ciW<lt>><esc>P
+nnoremap <leader>sw' ciw''<esc>P
+nnoremap <leader>sW' ciW''<esc>P
+nnoremap <leader>sw" ciw""<esc>P
+nnoremap <leader>sW" ciW""<esc>P
 
 " Surround the (s) with a <thing>
 " test ing
@@ -157,21 +159,3 @@ set wildignore+=*.pdf
 set wildignore+=*.sage.py
 
 
-" match ctermxxx for colors cterm90 or cterm8
-" cterm022
-let num = 255
-while num >= 0
-    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-    exec 'syn match col_'.num.' "cterm0\{0,2\}'.num.'" containedIn=ALL'
-    let num = num - 1
-endwhile
-" cterm0039cterm0039cterm0039cterm0039
-" cterm0039cterm0039cterm0039cterm0039
-" cterm0218cterm0218cterm0218cterm0218
-" cterm0218cterm0218cterm0218cterm0218
-" cterm0015cterm0015cterm0015cterm0015
-" cterm0015cterm0015cterm0015cterm0015
-" cterm0218cterm0218cterm0218cterm0218
-" cterm0218cterm0218cterm0218cterm0218
-" cterm0039cterm0039cterm0039cterm0039
-" cterm0039cterm0039cterm0039cterm0039
