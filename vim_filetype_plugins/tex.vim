@@ -41,21 +41,12 @@ hi! NewProblem  ctermbg=021     ctermfg=black
 hi! Unfinished  ctermbg=013     ctermfg=black
 hi! Optional    ctermbg=123     ctermfg=black
 
-let m = matchadd("NewProblem"     ,   ".*newProblem.*")
-let m = matchadd("NewProblem"     ,   ".*newInlineProblem.*")
-let m = matchadd("Unfinished"     ,   ".*UNFINISHED.*")
-let m = matchadd("Note"      ,   ".*NOTE.*")
-let m = matchadd("Optional"      ,   ".*OPTIONAL.*")
-let m = matchadd("TODO"      ,   ".*TODO.*")
-
-
-" \begin{newProblem}
-" \begin{newInlineProblem}
-" \begin{newInlineProblem}[UNFINISHED]
-" \begin{newInlineProblem}[OPTIONAL]
-" \begin{newInlineProblem}[NOTE]
-" \end{newInlineProblem}[NOTE]
-
+"let m = matchadd("NewProblem"     ,   ".*newProblem.*")
+"let m = matchadd("NewProblem"     ,   ".*newInlineProblem.*")
+"let m = matchadd("Unfinished"     ,   ".*UNFINISHED.*")
+"let m = matchadd("Note"      ,   ".*NOTE.*")
+"let m = matchadd("Optional"      ,   ".*OPTIONAL.*")
+"let m = matchadd("TODO"      ,   ".*TODO.*")
 
 nnoremap <leader>ir o\begin{array}{}<CR>\end{array}<esc>
 nnoremap <leader>ip o\begin{proof}<CR>\end{proof}<esc>
