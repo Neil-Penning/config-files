@@ -17,36 +17,22 @@ nnoremap <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>k$
 nnoremap <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>k$
 nnoremap <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>k$
 
-"   Name        ctermbg=xxx     ctermfg=black
-hi! Definition  ctermbg=green   ctermfg=black
-hi! Theorem     ctermbg=yellow  ctermfg=black
-hi! Example     ctermbg=097     ctermfg=black
-hi! Concept     ctermbg=blue    ctermfg=black
-hi! Problem     ctermbg=red     ctermfg=black
-hi! TODO        ctermbg=013     ctermfg=black
-hi! Note        ctermbg=grey    ctermfg=black
-hi! Quote       ctermbg=180     ctermfg=black
+"Problems
+nnoremap <leader>pf o\begin{newProblem}{}<CR>\end{newProblem}<esc>k$
+nnoremap <leader>pu o\begin{newProblem}[UNFINISHED]{}<CR>\end{newProblem}<esc>k$
+nnoremap <leader>pn o\begin{newProblem}[NOTE]{}<CR>\end{newProblem}<esc>k$
+nnoremap <leader>pq o\begin{newProblem}[QUESTION]{}<CR>\end{newProblem}<esc>k$
+nnoremap <leader>pc o\begin{newProblem}[CHECKED]{}<CR>\end{newProblem}<esc>k$
+nnoremap <leader>po o\begin{newProblem}[OPTIONAL]{}<CR>\end{newProblem}<esc>k$
 
-let m = matchadd("Definition",   ".*boxDefinition.*")
-let m = matchadd("Theorem"   ,   ".*boxTheorem.*")
-let m = matchadd("Example"   ,   ".*boxExample.*")
-let m = matchadd("Concept"   ,   ".*boxConcept.*")
-let m = matchadd("Problem"   ,   ".*boxProblem.*")
-let m = matchadd("TODO"      ,   ".*boxTODO.*")
-let m = matchadd("Note"      ,   ".*boxNote.*")
-let m = matchadd("Quote"     ,   ".*boxQuote.*")
+"Inline Problems
+nnoremap <leader>pif o\begin{newInlineProblem}{}<CR>\end{newInlineProblem}<esc>k$
+nnoremap <leader>piu o\begin{newInlineProblem}[UNFINISHED]{}<CR>\end{newInlineProblem}<esc>k$
+nnoremap <leader>pin o\begin{newInlineProblem}[NOTE]{}<CR>\end{newInlineProblem}<esc>k$
+nnoremap <leader>piq o\begin{newInlineProblem}[QUESTION]{}<CR>\end{newInlineProblem}<esc>k$
+nnoremap <leader>pic o\begin{newInlineProblem}[CHECKED]{}<CR>\end{newInlineProblem}<esc>k$
+nnoremap <leader>pio o\begin{newInlineProblem}[OPTIONAL]{}<CR>\end{newInlineProblem}<esc>k$
 
-"   Name        ctermbg=xxx     ctermfg=black
-hi! NewProblem  ctermbg=021     ctermfg=black
-hi! Unfinished  ctermbg=013     ctermfg=black
-hi! Optional    ctermbg=123     ctermfg=black
-
-"let m = matchadd("NewProblem"     ,   ".*newProblem.*")
-"let m = matchadd("NewProblem"     ,   ".*newInlineProblem.*")
-"let m = matchadd("Unfinished"     ,   ".*UNFINISHED.*")
-"let m = matchadd("Note"      ,   ".*NOTE.*")
-"let m = matchadd("Optional"      ,   ".*OPTIONAL.*")
-"let m = matchadd("TODO"      ,   ".*TODO.*")
 
 nnoremap <leader>ir o\begin{array}{}<CR>\end{array}<esc>
 nnoremap <leader>ip o\begin{proof}<CR>\end{proof}<esc>
