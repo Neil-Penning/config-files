@@ -6,8 +6,13 @@ set wildmenu
 
 set t_Co=256
 
+" find what hl group the cursor is on
 nnoremap <leader>sg :let s = synID(line('.'), col('.'), 1) \| echo synIDattr(s, 'name') . ' -<lt> ' . synIDattr(synIDtrans(s), 'name')<CR>
+
+" reload the highlighting
 nnoremap <leader>sr :syn off<CR>:syn on<CR>
+
+set conceallevel=2
 
 
 " keep 3 lines at top and bottom
