@@ -5,6 +5,16 @@ set mp=pdflatex\ #1\ -interaction=batchmode
 
 iabbrev detla delta
 
+" Does not work with \(\) (empty math strings)
+" Does not work if \) are first characters of a new line
+" visual am and im  to mimic a( and i(
+vnoremap am <esc> :silent! keeppattern normal! ?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr><C-l>
+vnoremap im <esc> :silent! keeppattern normal! ?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr><C-l>
+" operator am and im to mimic a( and i(
+omap am :normal vam<cr>
+omap im :normal vim<cr>
+
+
 "
 "Guideline : everything should end with <esc> to emulate pasting.
 " add box[THING] Leader
