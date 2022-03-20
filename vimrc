@@ -61,6 +61,8 @@ set autoindent
 
 "run the current line as a vim command
 nnoremap <leader>v yy:@"<cr>
+"run the current visual selection as a vim command
+vnoremap <leader>v y:@"<cr>
 "run the current file as a vim script
 nnoremap <leader>V :so %<cr>
 "run the current line as a bash command
