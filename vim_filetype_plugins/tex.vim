@@ -5,9 +5,9 @@ set mp=pdflatex\ #1\ -interaction=batchmode
 
 iabbrev detla delta
 
+" visual am and im  to mimic a( and i(
 " Does not work with \(\) (empty math strings)
 " Does not work if \) are first characters of a new line
-" visual am and im  to mimic a( and i(
 vnoremap am <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr>
 vnoremap im <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr>
 " operator am and im to mimic a( and i(
@@ -35,6 +35,34 @@ vnoremap i\[ <esc> :silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>llm<
 omap     a\[ :silent! normal va\[<cr>
 omap     i\[ :silent! normal vi\[<cr>
 
+" visuial ab[ and ib[ for (big) \left[ \right]
+vnoremap ab[ l<esc> :silent! keeppattern normal! ?\\left[<C-v><C-M>m</\\right]<C-v><C-M>6lm>gv<cr>
+vnoremap ib[ <esc> :silent! keeppattern normal! ?\\left[<C-v><C-M>6lm</\\right]<C-v><C-M>hm>gv<cr>
+" operator a\[ and i\[  to mimic a[ and i[
+omap     ab[ :silent! normal vab[<cr>
+omap     ib[ :silent! normal vib[<cr>
+
+" visuial ab( and ib( for (big) \left( \right)
+vnoremap ab( l<esc> :silent! keeppattern normal! ?\\left(<C-v><C-M>m</\\right)<C-v><C-M>6lm>gv<cr>
+vnoremap ib( <esc> :silent! keeppattern normal! ?\\left(<C-v><C-M>6lm</\\right)<C-v><C-M>hm>gv<cr>
+" operator a\[ and i\[  to mimic a[ and i[
+omap     ab[ :silent! normal vab[<cr>
+omap     ib[ :silent! normal vib[<cr>
+
+" visuial ab\{ and ib\{ for (big) \left\{ \right\}
+vnoremap ab{ l<esc> :silent! keeppattern normal! ?\\left\\{<C-v><C-M>m</\\right\\}<C-v><C-M>7lm>gv<cr>
+vmap ab\{ ab{
+vnoremap ib{ <esc> :silent! keeppattern normal! ?\\left\\{<C-v><C-M>7lm</\\right\\}<C-v><C-M>hm>gv<cr>
+vmap ib\{ ib{
+" operator a\[ and i\[  to mimic a[ and i[
+omap     ab{ :silent! normal vab[<cr>
+omap     ab\{ ab{
+omap     ib{ :silent! normal vib[<cr>
+omap     ib\{ ib{
+
+"  test \left\{ test \right\}
+"  test \left( test \right)
+"  test \left[ test \right]
 
 
 "
