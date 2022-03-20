@@ -8,11 +8,33 @@ iabbrev detla delta
 " Does not work with \(\) (empty math strings)
 " Does not work if \) are first characters of a new line
 " visual am and im  to mimic a( and i(
-vnoremap am <esc> :silent! keeppattern normal! ?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr><C-l>
-vnoremap im <esc> :silent! keeppattern normal! ?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr><C-l>
+vnoremap am <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr>
+vnoremap im <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr>
 " operator am and im to mimic a( and i(
 omap am :normal vam<cr>
 omap im :normal vim<cr>
+
+" visual a\{ and i\{  to mimic a{ and i{
+vnoremap a\{ <esc> :silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>hm</\\}<C-v><C-M>lm>gv<cr>
+vnoremap i\{ <esc> :silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>llm</\\}<C-v><C-M>hm>gv<cr>
+" operator a\{ and i\{  to mimic a{ and i{
+omap     i\{ :normal vi\{<cr>
+omap     a\{ :normal va\{<cr>
+
+" visual a\( and i\(  to mimic a( and i(
+vnoremap a\( <esc> :silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>hm</\\)<C-v><C-M>lm>gv<cr>
+vnoremap i\( <esc> :silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>llm</\\)<C-v><C-M>hm>gv<cr>
+" operator a\( and i\(  to mimic a( and i(
+omap     i\( :normal vi\(<cr>
+omap     a\( :normal va\(<cr>
+
+" visuial a\[ and i\[  to mimic a[ and i[
+vnoremap a\[ <esc> :silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>hm</\\]<C-v><C-M>lm>gv<cr>
+vnoremap i\[ <esc> :silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>llm</\\]<C-v><C-M>hm>gv<cr>
+" operator a\[ and i\[  to mimic a[ and i[
+omap     a\[ :silent! normal va\[<cr>
+omap     i\[ :silent! normal vi\[<cr>
+
 
 
 "
