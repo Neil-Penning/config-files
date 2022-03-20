@@ -164,15 +164,15 @@ nnoremap <leader>coa ?\\[<cr>c2l\begin{align*}<esc>/\\]<cr>c2l\end{align*}<esc>
 nnoremap <leader>cio ?\\(<cr>d/\\)<cr>xs<cr>\[<cr>\]<cr><esc>kO<C-r>1<esc>^xx
 
 " Normal mode math commands
-nnoremap <leader>imo o\[<CR>\]<esc>
-nnoremap <leader>imi o\(<CR>\)<esc>
-nnoremap <leader>ima o\begin{align*}<CR>\end{align*}<esc>
+nnoremap <leader>imo o\[ <CR>\]<esc>
+nnoremap <leader>imi o\( <CR>\)<esc>
+nnoremap <leader>ima o\begin{align*} <CR>\end{align*}<esc>
+nmap     <leader>ia ima
 " insert mode math commands
 inoremap <leader>imi \(  \)<c-o>2h
-inoremap <leader>imo <cr>\[<cr>\]<C-o>O<tab>
-inoremap <leader>imi <cr>\(<cr>\)<C-o>O<tab>
-inoremap <leader>ima <cr>\begin{align*}<cr>\end{align*}<C-o>O<tab>
-nnoremap <leader>ia o\begin{align*}<CR>\end{align*}<esc>
+inoremap <leader>imo <cr>\[ <cr>\]<C-o>O<tab>
+inoremap <leader>imi <cr>\( <cr>\)<C-o>O<tab>
+inoremap <leader>ima <cr>\begin{align*} <cr>\end{align*}<C-o>O<tab>
 
 "Exit math inline and exit math outline
 inoremap <leader>emi <c-o>/\\)<cr><c-o>$
