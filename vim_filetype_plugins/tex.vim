@@ -5,69 +5,75 @@ set mp=pdflatex\ #1\ -interaction=batchmode
 
 iabbrev detla delta
 
+" visual and operator commands for tex items
 " visual am and im  to mimic a( and i(
 " Does not work with \(\) (empty math strings)
 " Does not work if \) are first characters of a new line
-vnoremap am <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr>
-vnoremap im <esc> :silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr>
+" Does not work if cursor is placed on character _ in _\)
+vnoremap am <esc>:silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>hm</\\]\\|\\)<C-v><C-M>lm>gv<cr>
+vnoremap im <esc>:silent! keeppattern normal! /\\]\\|\\)<C-v><C-M>?\\[\\|\\(<C-v><C-M>llm</\\]\\|\\)<C-v><C-M>hm>gv<cr>
 " operator am and im to mimic a( and i(
 omap am :normal vam<cr>
 omap im :normal vim<cr>
 
 " visual a\{ and i\{  to mimic a{ and i{
-vnoremap a\{ <esc> :silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>hm</\\}<C-v><C-M>lm>gv<cr>
-vnoremap i\{ <esc> :silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>llm</\\}<C-v><C-M>hm>gv<cr>
+vnoremap a\{ <esc>:silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>m</\\}<C-v><C-M>lm>gv<cr>
+vnoremap i\{ <esc>:silent! keeppattern normal! /\\}<C-v><C-M>?\\{<C-v><C-M>llm</\\}<C-v><C-M>hm>gv<cr>
 " operator a\{ and i\{  to mimic a{ and i{
 omap     i\{ :normal vi\{<cr>
 omap     a\{ :normal va\{<cr>
 
 " visual a\( and i\(  to mimic a( and i(
-vnoremap a\( <esc> :silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>hm</\\)<C-v><C-M>lm>gv<cr>
-vnoremap i\( <esc> :silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>llm</\\)<C-v><C-M>hm>gv<cr>
+vnoremap a\( <esc>:silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>m</\\)<C-v><C-M>lm>gv<cr>
+vnoremap i\( <esc>:silent! keeppattern normal! /\\)<C-v><C-M>?\\(<C-v><C-M>llm</\\)<C-v><C-M>hm>gv<cr>
 " operator a\( and i\(  to mimic a( and i(
 omap     i\( :normal vi\(<cr>
 omap     a\( :normal va\(<cr>
 
-" visuial a\[ and i\[  to mimic a[ and i[
-vnoremap a\[ <esc> :silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>hm</\\]<C-v><C-M>lm>gv<cr>
-vnoremap i\[ <esc> :silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>llm</\\]<C-v><C-M>hm>gv<cr>
+" visual a\[ and i\[  to mimic a[ and i[
+vnoremap a\[ <esc>:silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>m</\\]<C-v><C-M>lm>gv<cr>
+vnoremap i\[ <esc>:silent! keeppattern normal! /\\]<C-v><C-M>?\\[<C-v><C-M>llm</\\]<C-v><C-M>hm>gv<cr>
 " operator a\[ and i\[  to mimic a[ and i[
-omap     a\[ :silent! normal va\[<cr>
-omap     i\[ :silent! normal vi\[<cr>
+omap     a\[:silent! normal va\[<cr>
+omap     i\[:silent! normal vi\[<cr>
 
-" visuial ab[ and ib[ for (big) \left[ \right]
-vnoremap ab[ l<esc> :silent! keeppattern normal! ?\\left[<C-v><C-M>m</\\right]<C-v><C-M>6lm>gv<cr>
-vnoremap ib[ <esc> :silent! keeppattern normal! ?\\left[<C-v><C-M>6lm</\\right]<C-v><C-M>hm>gv<cr>
+" visual ab[ and ib[ for (big) \left[ \right]
+vnoremap ab[ l<esc>:silent! keeppattern normal! ?\\left[<C-v><C-M>m</\\right]<C-v><C-M>6lm>gv<cr>
+vnoremap ib[ <esc>:silent! keeppattern normal! ?\\left[<C-v><C-M>6lm</\\right]<C-v><C-M>hm>gv<cr>
 " operator a\[ and i\[  to mimic a[ and i[
-omap     ab[ :silent! normal vab[<cr>
-omap     ib[ :silent! normal vib[<cr>
+omap     ab[:silent! normal vab[<cr>
+omap     ib[:silent! normal vib[<cr>
 
-" visuial ab( and ib( for (big) \left( \right)
-vnoremap ab( l<esc> :silent! keeppattern normal! ?\\left(<C-v><C-M>m</\\right)<C-v><C-M>6lm>gv<cr>
-vnoremap ib( <esc> :silent! keeppattern normal! ?\\left(<C-v><C-M>6lm</\\right)<C-v><C-M>hm>gv<cr>
+" visual ab( and ib( for (big) \left( \right)
+vnoremap ab( l<esc>:silent! keeppattern normal! ?\\left(<C-v><C-M>m</\\right)<C-v><C-M>6lm>gv<cr>
+vnoremap ib( <esc>:silent! keeppattern normal! ?\\left(<C-v><C-M>6lm</\\right)<C-v><C-M>hm>gv<cr>
 " operator a\[ and i\[  to mimic a[ and i[
-omap     ab[ :silent! normal vab[<cr>
-omap     ib[ :silent! normal vib[<cr>
+omap     ab[:silent! normal vab[<cr>
+omap     ib[:silent! normal vib[<cr>
 
-" visuial ab\{ and ib\{ for (big) \left\{ \right\}
-vnoremap ab{ l<esc> :silent! keeppattern normal! ?\\left\\{<C-v><C-M>m</\\right\\}<C-v><C-M>7lm>gv<cr>
+" visual ab\{ and ib\{ for (big) \left\{ \right\}
+vnoremap ab{ l<esc>:silent! keeppattern normal! ?\\left\\{<C-v><C-M>m</\\right\\}<C-v><C-M>7lm>gv<cr>
 vmap ab\{ ab{
-vnoremap ib{ <esc> :silent! keeppattern normal! ?\\left\\{<C-v><C-M>7lm</\\right\\}<C-v><C-M>hm>gv<cr>
+vnoremap ib{ <esc>:silent! keeppattern normal! ?\\left\\{<C-v><C-M>7lm</\\right\\}<C-v><C-M>hm>gv<cr>
 vmap ib\{ ib{
-" operator a\[ and i\[  to mimic a[ and i[
-omap     ab{ :silent! normal vab[<cr>
+" operator a\{ and i\{  to mimic a{ and i{
+omap     ab{:silent! normal vab{<cr>
 omap     ab\{ ab{
-omap     ib{ :silent! normal vib[<cr>
+omap     ib{:silent! normal vib{<cr>
 omap     ib\{ ib{
 
+"  test \( test \)
+"  test \[ test \]
+"  test \{ test \}
+"
+"  vab{ vab\{ vib{ vab{
 "  test \left\{ test \right\}
 "  test \left( test \right)
 "  test \left[ test \right]
 
 
-"
-"Guideline : everything should end with <esc> to emulate pasting.
 " add box[THING] Leader
+"Guideline : everything should end with <esc> to emulate pasting.
 nnoremap <leader>bd o\begin{boxDefinition}{}<CR>\end{boxDefinition}<esc>k$
 nnoremap <leader>bt o\begin{boxTheorem}{}<CR>\end{boxTheorem}<esc>k$
 nnoremap <leader>be o\begin{boxExample}{}<CR>\end{boxExample}<esc>k$
@@ -94,6 +100,7 @@ nnoremap <leader>pic o\begin{newInlineProblem}[CHECKED]{}<CR>\end{newInlineProbl
 nnoremap <leader>pio o\begin{newInlineProblem}[OPTIONAL]{}<CR>\end{newInlineProblem}<esc>k$
 
 
+"insert misc. environments
 nnoremap <leader>ir o\begin{array}{}<CR>\end{array}<esc>
 nnoremap <leader>ip o\begin{proof}<CR>\end{proof}<esc>
 nnoremap <leader>ii o\begin{itemize}<CR>\end{itemize}<esc>O<tab>\item <esc>
@@ -103,6 +110,7 @@ inoremap <leader>; <c-o>$
 
 nnoremap <leader>% 128I%<esc>0
 
+"insert matricies
 nnoremap <leader>i2 o\twotwo<CR><tab>{ }{ }<cr>{ }{ }<esc>
 nnoremap <leader>i3 o\threethree<CR><tab>{ }{ }{ }<cr>{ }{ }{ }<cr>{ }{ }{ }<esc>
 " map <leader>i4 o\fourfour<CR><tab>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr>{ }{ }{ }{ }<cr><esc>
@@ -141,8 +149,6 @@ noremap <leader>sWmo ciW<Bslash>[<Bslash>]<esc>hP
 "assumes you are on left side of () or [] 
 noremap <leader>sb i<Bslash>left<esc>l%i<Bslash>right<esc>
 vnoremap <leader>sb c<Bslash>left<C-r>"<esc>i<Bslash>right<esc>l
-"undos <leader>sb
-"nnoremap <leader>sb 
 
 
 "make new [o]perator [c]ommand out of a word
