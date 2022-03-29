@@ -1,3 +1,14 @@
 # https://superuser.com/questions/22535/what-is-randomart-produced-by-ssh-keygen
 # http://users.ece.cmu.edu/~adrian/projects/validation/validation.pdf
 VisualHostKey=yes
+
+Host *
+  AddKeysToAgent yes
+
+Host ssh.penning.solutions
+    User np
+    Port 22
+Host deuterium.penning.solutions
+    ProxyJump ssh.penning.solutions
+    HostName localhost
+    Port 43022
