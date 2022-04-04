@@ -142,6 +142,9 @@ set confirm
 " Highlight search terms as they're typed.
 set incsearch
 
+" exit current buffer
+nnoremap Q :bd<CR>
+
 " ignore the following filetypes when using vim's wild tab complete
 set wildignore+=*.log
 set wildignore+=*.toc
