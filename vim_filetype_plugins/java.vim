@@ -13,3 +13,6 @@ nnoremap <leader>zf 0wzf%j0f{zf%
 inoremap ;; <c-o>$;
 
 set colorcolumn=120
+set errorformat+=[ERROR]\ %f:%l:%c:%m
+set errorformat+=[ERROR]\ %f:%l:%m
+
