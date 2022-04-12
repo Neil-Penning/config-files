@@ -20,8 +20,6 @@ alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias createsections='python3 ~/Applications/createsections.py'
 alias z3='~/Applications/z3'
 
-alias sage="/Applications/SageMath-9.2.app/sage"
-
 alias checkjava="java -jar $ltx/GT-CS-1332/checkstyle-8.12-all.jar -c $ltx/GT-CS-1332/CS1332-checkstyle.xml"
 
 alias mux="tmuxinator"
@@ -54,4 +52,4 @@ alias tb="if [ -n \"$TMUX\" ]; then tmux has-session -t base || tmux new-session
 #     tmux new-session -A -s base;
 # fi
 
-
+alias bw-unlock='export BW_SESSION="$(bw unlock --raw)"'
