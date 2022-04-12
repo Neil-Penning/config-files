@@ -105,6 +105,15 @@ vnoremap <leader>s{ c{}<esc>P
 vnoremap <leader>s< c<lt>><esc>P
 vnoremap <leader>s' c''<esc>P
 vnoremap <leader>s" c""<esc>P
+vnoremap <leader>s<space> c  <esc>P
+
+nmap <leader>s( v<leader>s(
+nmap <leader>s[ v<leader>s[
+nmap <leader>s{ v<leader>s{
+nmap <leader>s< v<leader>s<
+nmap <leader>s' v<leader>s'
+nmap <leader>s" v<leader>s"
+nmap <leader>s<space> v<leader>s<space>
 
 " Evaluate selected string with expression register, paste result.
 " (2150*8989)
@@ -144,6 +153,9 @@ set incsearch
 
 " exit current buffer
 nnoremap Q :bd<CR>
+
+set efm=
+
 
 " ignore the following filetypes when using vim's wild tab complete
 set wildignore+=*.log
