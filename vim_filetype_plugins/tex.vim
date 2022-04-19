@@ -4,6 +4,10 @@ syntax spell toplevel
 set mp=pdflatex\ #1\ -interaction=batchmode
 
 iabbrev detla delta
+iabbrev mobius Möbius
+iabbrev Mobius Möbius
+iabbrev Edros Erdős
+iabbrev edros Erdős
 
 " visual and operator commands for tex items
 " visual am and im  to mimic a( and i(
