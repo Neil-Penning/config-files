@@ -84,27 +84,29 @@ nnoremap <leader>'' :%norm I'<C-v><esc>A'<cr>
 nnoremap <leader>PS :%s /\./ /g<cr>:%norm $Bhr.<cr>
 
 " Surround the current w/Word with a <thing>
-nnoremap <leader>sw( ciw()<esc>P
-nnoremap <leader>sW( ciW()<esc>P
-nnoremap <leader>sw[ ciw[]<esc>P
-nnoremap <leader>sW[ ciW[]<esc>P
-nnoremap <leader>sw{ ciw{}<esc>P
-nnoremap <leader>sW{ ciW{}<esc>P
-nnoremap <leader>sw< ciw<lt>><esc>P
-nnoremap <leader>sW< ciW<lt>><esc>P
-nnoremap <leader>sw' ciw''<esc>P
-nnoremap <leader>sW' ciW''<esc>P
-nnoremap <leader>sw" ciw""<esc>P
-nnoremap <leader>sW" ciW""<esc>P
+" nnoremap <leader>sw( ciw()<esc>P
+" nnoremap <leader>sW( ciW()<esc>P
+" nnoremap <leader>sw[ ciw[]<esc>P
+" nnoremap <leader>sW[ ciW[]<esc>P
+" nnoremap <leader>sw{ ciw{}<esc>P
+" nnoremap <leader>sW{ ciW{}<esc>P
+" nnoremap <leader>sw< ciw<lt>><esc>P
+" nnoremap <leader>sW< ciW<lt>><esc>P
+" nnoremap <leader>sw' ciw''<esc>P
+" nnoremap <leader>sW' ciW''<esc>P
+" nnoremap <leader>sw" ciw""<esc>P
+" nnoremap <leader>sW" ciW""<esc>P
 
-" Surround the (s) with a <thing>
+" \urround the (s) with a <thing>
 " test ing
 vnoremap <leader>s( c()<esc>P
 vnoremap <leader>s[ c[]<esc>P
 vnoremap <leader>s{ c{}<esc>P
 vnoremap <leader>s< c<lt>><esc>P
 vnoremap <leader>s' c''<esc>P
+vnoremap <leader>s\' s\'\'<esc>hP
 vnoremap <leader>s" c""<esc>P
+vnoremap <leader>s\" s\"\"<esc>hP
 vnoremap <leader>s<space> c  <esc>P
 
 nmap <leader>s( v<leader>s(
@@ -113,6 +115,8 @@ nmap <leader>s{ v<leader>s{
 nmap <leader>s< v<leader>s<
 nmap <leader>s' v<leader>s'
 nmap <leader>s" v<leader>s"
+nmap <leader>s\' v<leader>s\'
+nmap <leader>s\" v<leader>s\"
 nmap <leader>s<space> v<leader>s<space>
 
 " Evaluate selected string with expression register, paste result.
