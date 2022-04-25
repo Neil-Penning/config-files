@@ -3,11 +3,14 @@ vcp () {
         echo "Cannot copy the directory \"$1\"";
     elif [[ -d "$2" ]] ; then
         echo "Cannot copy to the dirctory \"$2\""
+    elif ! [[ -e "$2" ]] ; then 
+        echo "Creating: \"$1\" -> \"$2\""
+        cp "$1" "$2"
     elif ! cmp --silent "$1" "$2" ; then 
         echo "Copying: \"$1\" -> \"$2\""
         cp "$1" "$2"
-#    else
-#        echo "Not copies : \"$1\" -> \"$2\""
+    # else
+    #     echo "Not copied : \"$1\" -> \"$2\""
     fi
 }
 if ! [ -f ./os.txt ]; 
@@ -36,7 +39,15 @@ fi
     vcp vimrc ~/.vimrc
     [ -d $HOME/.vim/ftplugin ] || (mkdir -p $HOME/.vim/ftplugin; echo "made directory $HOME/.vim/ftplugin")
     vcp ./filetype.vim $HOME/.vim/filetype.vim
-    vcp ./vim_filetype_plugins/* ~/.vim/ftplugin/
+
+    # TODO make vcp support folder copying
+    vcp ./vim_filetype_plugins/python.vim ~/.vim/ftplugin/python.vim
+    vcp ./vim_filetype_plugins/tex.vim ~/.vim/ftplugin/tex.vim
+    vcp ./vim_filetype_plugins/java.vim ~/.vim/ftplugin/java.vim
+    vcp ./vim_filetype_plugins/scene.vim ~/.vim/ftplugin/scene.vim
+    vcp ./vim_filetype_plugins/sh.vim ~/.vim/ftplugin/sh.vim
+    vcp ./vim_filetype_plugins/vim.vim ~/.vim/ftplugin/vim.vim
+
     # make vim syntax directory if it doesn't exist
     [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")
     # copy syntax file from vim-tex-syntax if submodule is included
