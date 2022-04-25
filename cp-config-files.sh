@@ -19,6 +19,10 @@ else
 fi
 
 #Bash files
+    if ! [ -e  $HOME/.bash_prompt ];
+    then
+        vcp ./prompts/default/bash_prompt $HOME/.bash_prompt
+    fi
     vcp bash_aliases.sh ~/.bash_aliases
     vcp bash_profile.sh ~/.bash_profile
 
@@ -43,9 +47,12 @@ fi
         echo "./vim-tex-syntax does not exist"
     fi
 
-
 # Tmux
-    vcp tmux.conf ~/.tmux.conf
+    vcp tmux.conf $HOME/.tmux.conf
+    if ! [ -e  $HOME/.tmux_profile.conf ];
+    then
+        vcp ./prompts/default/tmux_profile.conf $HOME/.tmux_profile.conf
+    fi
     ~/.tmux/plugins/tpm/bin/install_plugins
 
 if ! [ -f $HOME/.ssh/config ]; 
