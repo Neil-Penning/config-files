@@ -3,3 +3,9 @@ https://superuser.com/a/980982/1095674
 
 Chose colors from here:
 https://www.shellhacks.com/bash-colors/
+
+tmux config goes in
+~/.tmux_profile.conf
+
+bash prompt goes in
+~/.bash_prompt.conf
