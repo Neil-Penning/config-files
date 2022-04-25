@@ -140,9 +140,6 @@ cnoremap ;; <C-f>
 :hi TabLine ctermfg=White ctermbg=Red
 :hi TabLineSel ctermfg=White ctermbg=Blue
 
-" highlight when searching with /
-" https://vim.fandom.com/wiki/Highlight_all_search_pattern_matches
-set hlsearch
 
 " Change (Matching parenthesis) highlight color
 " https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
@@ -158,6 +155,17 @@ set incsearch
 " exit current buffer
 nnoremap Q :bd<CR>
 
+"set hlsearch
+" set hlsearch on when relevent (rest is mine)
+nnoremap / :set hlsearch<cr>/
+nnoremap ? :set hlsearch<cr>?
+nnoremap n :set hlsearch<cr>n
+nnoremap N :set hlsearch<cr>N
+nnoremap * :set hlsearch<cr>*
+" turn hlsearch off
+nnoremap <esc> :noh<cr>
+
+"clear errorformat
 set efm=
 
 
