@@ -38,24 +38,24 @@ fi
 # Vim 
     vcp vimrc ~/.vimrc
     [ -d $HOME/.vim/ftplugin ] || (mkdir -p $HOME/.vim/ftplugin; echo "made directory $HOME/.vim/ftplugin")
-    vcp ./filetype.vim $HOME/.vim/filetype.vim
+    vcp ./vim/filetype.vim $HOME/.vim/filetype.vim
 
     # TODO make vcp support folder copying
-    vcp ./vim_filetype_plugins/python.vim ~/.vim/ftplugin/python.vim
-    vcp ./vim_filetype_plugins/tex.vim ~/.vim/ftplugin/tex.vim
-    vcp ./vim_filetype_plugins/java.vim ~/.vim/ftplugin/java.vim
-    vcp ./vim_filetype_plugins/scene.vim ~/.vim/ftplugin/scene.vim
-    vcp ./vim_filetype_plugins/sh.vim ~/.vim/ftplugin/sh.vim
-    vcp ./vim_filetype_plugins/vim.vim ~/.vim/ftplugin/vim.vim
+    vcp ./vim/ftplugin/python.vim   ~/.vim/ftplugin/python.vim
+    vcp ./vim/ftplugin/tex.vim      ~/.vim/ftplugin/tex.vim
+    vcp ./vim/ftplugin/java.vim     ~/.vim/ftplugin/java.vim
+    vcp ./vim/ftplugin/scene.vim    ~/.vim/ftplugin/scene.vim
+    vcp ./vim/ftplugin/sh.vim       ~/.vim/ftplugin/sh.vim
+    vcp ./vim/ftplugin/vim.vim      ~/.vim/ftplugin/vim.vim
 
     # make vim syntax directory if it doesn't exist
     [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")
     # copy syntax file from vim-tex-syntax if submodule is included
-    if [ -e ./vim-tex-syntax/syntax/tex.vim ];
+    if [ -e ./vim/vim-tex-syntax/syntax/tex.vim ];
     then
-        vcp ./vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax/tex.vim;
+        vcp ./vim/vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax/tex.vim;
     else
-        echo "./vim-tex-syntax does not exist"
+        echo "./vim/vim-tex-syntax does not exist"
     fi
 
 # Tmux
