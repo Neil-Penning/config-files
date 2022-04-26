@@ -44,12 +44,13 @@ fi
     vcp ./vim/ftplugin/python.vim   ~/.vim/ftplugin/python.vim
     vcp ./vim/ftplugin/tex.vim      ~/.vim/ftplugin/tex.vim
     vcp ./vim/ftplugin/java.vim     ~/.vim/ftplugin/java.vim
-    vcp ./vim/ftplugin/scene.vim    ~/.vim/ftplugin/scene.vim
     vcp ./vim/ftplugin/sh.vim       ~/.vim/ftplugin/sh.vim
     vcp ./vim/ftplugin/vim.vim      ~/.vim/ftplugin/vim.vim
+    # vcp ./vim/ftplugin/scene.vim    ~/.vim/ftplugin/scene.vim
 
     # make vim syntax directory if it doesn't exist
     [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")
+    vcp ./vim/syntax/scene.vim   ~/.vim/syntax/scene.vim
     # copy syntax file from vim-tex-syntax if submodule is included
     if [ -e ./vim/vim-tex-syntax/syntax/tex.vim ];
     then
