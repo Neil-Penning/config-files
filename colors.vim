@@ -3,9 +3,35 @@
 let num = 255
 while num >= 0
     exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-    "exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
+    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
+
+    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
+    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
+
+    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
+    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
     let num = num - 1
 endwhile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
