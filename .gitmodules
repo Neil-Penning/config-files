@@ -1,3 +1,9 @@
 [submodule "vim-tex-syntax"]
 	path = vim/vim-tex-syntax
 	url = https://github.com/Neil-Penning/vim-tex-syntax
+[submodule "scripts/runtex"]
+	path = scripts/runtex
+	url = git@github.com:Neil-Penning/runtex.git
+[submodule "scripts/yt-dl-tools"]
+	path = scripts/yt-dl-tools
+	url = git@github.com:Neil-Penning/yt-dl-tools.git
