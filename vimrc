@@ -167,7 +167,7 @@ nnoremap n :set hlsearch<cr>n
 nnoremap N :set hlsearch<cr>N
 nnoremap * :set hlsearch<cr>*
 " turn hlsearch off
-nnoremap <esc> :noh<cr>
+nnoremap <leader>h :noh<cr>
 
 "clear errorformat
 set efm=
