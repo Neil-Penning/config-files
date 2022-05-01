@@ -41,12 +41,16 @@ fi
     vcp ./vim/filetype.vim $HOME/.vim/filetype.vim
 
     # TODO make vcp support folder copying
+
+    #ftplugin
     vcp ./vim/ftplugin/python.vim   ~/.vim/ftplugin/python.vim
     vcp ./vim/ftplugin/tex.vim      ~/.vim/ftplugin/tex.vim
     vcp ./vim/ftplugin/java.vim     ~/.vim/ftplugin/java.vim
-    vcp ./vim/ftplugin/scene.vim    ~/.vim/ftplugin/scene.vim
     vcp ./vim/ftplugin/sh.vim       ~/.vim/ftplugin/sh.vim
     vcp ./vim/ftplugin/vim.vim      ~/.vim/ftplugin/vim.vim
+    #syntax
+    vcp ./vim/syntax/scene.vim    ~/.vim/syntax/scene.vim
+    vcp ./vim/syntax/quote.vim    ~/.vim/syntax/quote.vim
 
     # make vim syntax directory if it doesn't exist
     [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")

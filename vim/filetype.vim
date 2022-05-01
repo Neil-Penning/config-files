@@ -6,3 +6,7 @@ augroup END
 augroup filetypedetect
   au! BufRead,BufNewFile *.scene setfiletype scene
 augroup END
+
+augroup filetypedetect
+  au! BufRead,BufNewFile *.quote setfiletype quote
+augroup END
