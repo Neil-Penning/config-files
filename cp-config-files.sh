@@ -54,6 +54,7 @@ fi
 
     # make vim syntax directory if it doesn't exist
     [ -d $HOME/.vim/syntax ] || (mkdir -p $HOME/.vim/syntax; echo "made directory $HOME/.vim/syntax")
+    vcp ./vim/syntax/scene.vim   ~/.vim/syntax/scene.vim
     # copy syntax file from vim-tex-syntax if submodule is included
     if [ -e ./vim/vim-tex-syntax/syntax/tex.vim ];
     then
