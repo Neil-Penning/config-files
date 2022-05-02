@@ -10,11 +10,11 @@ COLOR_BAD=$RED
 COLOR_OCCUR=$YELLOW
 COLOR_GOOD=$GREEN
 
-print_color() { printf "$1$2${NC}\n" }
-print_create() { print_color $COLOR_CREATE "$1" }
-print_bad() { print_color $COLOR_BAD "$1" }
-print_good() { print_color $COLOR_GOOD "$1" }
-print_occur() { print_color $COLOR_OCCUR "$1" }
+print_color() { printf "$1$2${NC}\n"; }
+print_create() { print_color $COLOR_CREATE "$1"; }
+print_bad() { print_color $COLOR_BAD "$1"; }
+print_good() { print_color $COLOR_GOOD "$1"; }
+print_occur() { print_color $COLOR_OCCUR "$1"; }
 vmkdir () {
     if ! [[ -d "$1" ]]; then
         mkdir -p "$1"
@@ -32,21 +32,19 @@ vcp () {
     elif ! cmp --silent "$1" "$2" ; then 
         print_occur "Copying: \"${NC}$1${COLOR_OCCUR}\" -> \"${NC}$2${COLOR_OCCUR}\""
         cp "$1" "$2"
-     else
+    else
          print_good "No Change: ${NC}\"$2\""
     fi
 }
-if ! [[ -f ./os.txt ]]; 
-then
-    print_bad "FAILED: set OS type in ${NC}$HOME/config-files/os.txt";
-    exit 1;
+if ! [[ -f ./os.txt ]]; then
+    print_bad "FAILED: set OS type in ${NC}$HOME/config-files/os.txt"
+    exit 1
 else
     vcp ./os.txt $HOME/.os.txt
 fi
 
 #Bash files
-    if [[ -e  $HOME/.bash_prompt ]];
-    then
+    if [[ -e  $HOME/.bash_prompt ]]; then
         print_good "No Overwrite: ${NC}$HOME/.bash_prompt"
     else
         vcp ./prompts/default/bash_prompt $HOME/.bash_prompt
@@ -82,7 +80,7 @@ fi
 
     # copy syntax file from vim-tex-syntax if submodule is included
     if [[ -e ./vim/vim-tex-syntax/syntax/tex.vim ]]; then
-        vcp ./vim/vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax/tex.vim;
+        vcp ./vim/vim-tex-syntax/syntax/tex.vim $HOME/.vim/syntax/tex.vim
     else
         print_bad "./vim/vim-tex-syntax does not exist"
     fi
