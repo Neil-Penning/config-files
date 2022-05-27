@@ -3,15 +3,26 @@
 let num = 255
 while num >= 0
     exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
-
-    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
-
-    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-    exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
+    exec 'syn match col_'.num.' "\(\s\|^\)\D\{\}\d0\{0,2\}'.num.'\D\{\}\(\s\|$\)" containedIn=ALL'
+    "exec 'syn match col_'.num.' "cterm\([fb]g=\)\=0\{0,2\}'.num.'" containedIn=ALL'
+    "exec 'syn match col_'.num.' "colou\?r0\{0,2\}'.num.'" containedIn=ALL'
+    "exec 'syn match col_'.num.' "\(\D\|^\)0\{0,2\}'.num.'\(\D\|$\)" containedIn=ALL'
     let num = num - 1
 endwhile
+
+let num = 0 
+let fg = 64
+while fg >= 0
+    let bg = 64
+    while bg >= 0
+        exec 'hi f'.fg.'b'.bg.' ctermbg='.bg.' ctermfg='.fg
+        exec 'syn match f'.fg.'b'.bg '"f0\{0,1\}'.fg.'b0\{0,1\}'.bg.'" containedIn=ALL'
+        let bg = bg - 1
+        let num = num + 1
+    endwhile
+    let fg = fg - 1
+endwhile
+
 
 
 
