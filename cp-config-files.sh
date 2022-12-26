@@ -1,4 +1,46 @@
 RED='\033[0;31m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+COLOR_CREATE=$CYAN
+COLOR_BAD=$RED
+COLOR_OCCUR=$YELLOW
+COLOR_GOOD=$GREEN
+
+print_color() { printf "$1$2${NC}\n"; }
+print_create() { print_color $COLOR_CREATE "$1"; }
+print_bad() { print_color $COLOR_BAD "$1"; }
+print_good() { print_color $COLOR_GOOD "$1"; }
+print_occur() { print_color $COLOR_OCCUR "$1"; }
+
+print_dne() { print_bad "Does not exist: \"${NC}$1${COLOR_BAD}\""; }
+print_no_overwrite() { print_good "No Overwrite: ${NC}$1${COLOR_GOOD}"; }
+
+vmkdir () {
+    if ! [[ -d "$1" ]]; then
+        mkdir -p "$1"
+        print_create "Made directory ${NC}\"$1\""
+    fi
+}
+vcp () {
+    if [[ -d "$1" ]] ; then
+        print_bad "Cannot copy the directory \"${NC}$1${COLOR_BAD}\""
+    elif [[ -d "$2" ]] ; then
+        print_bad "Cannot copy to the directory \"${NC}$2${COLOR_BAD}\""
+    elif ! [[ -e "$2" ]] ; then 
+        print_create "Creating: \"${NC}$1${COLOR_CREATE}\" -> \"${NC}$2${COLOR_CREATE}\""
+        cp "$1" "$2"
+    elif ! cmp --silent "$1" "$2" ; then 
+        print_occur "Copying: \"${NC}$1${COLOR_OCCUR}\" -> \"${NC}$2${COLOR_OCCUR}\""
+        cp "$1" "$2"
+    else
+         print_good "No Change: ${NC}\"$2\""
+    fi
+}
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 YELLOW='\033[1;33m'
