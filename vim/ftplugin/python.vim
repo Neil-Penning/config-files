@@ -1,3 +1,3 @@
 " PYTHON
-
-set foldmethod=indent
+colorscheme elflord
+"set foldmethod=indent
