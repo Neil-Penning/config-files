@@ -52,4 +52,9 @@ alias tb="if [ -n \"$TMUX\" ]; then tmux has-session -t base || tmux new-session
 #     tmux new-session -A -s base;
 # fi
 
+alias jt='cd ~/Journal/ && vim "./Daily.md/$(date -I date).md"'
+
 alias bw-unlock='export BW_SESSION="$(bw unlock --raw)"'
+
+alias manim_jupyter='sudo docker run -it -p 8888:8888 manimcommunity/manim jupyter lab --ip=0.0.0.0'
+alias docker-kill-all='sudo docker container kill $(sudo docker container ls -q)
