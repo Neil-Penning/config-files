@@ -9,6 +9,28 @@ iabbrev Mobius Möbius
 iabbrev Edros Erdős
 iabbrev edros Erdős
 
+iabbrev wronskian Wrońskian
+iabbrev Wronskian Wrońskian
+
+iabbrev latex \LaTeX
+
+iabbrev rP r^\prime
+iabbrev rPP r^{\prime\prime}
+iabbrev zP z^\prime
+iabbrev zPP z^{\prime\prime}
+
+iabbrev Lij L_{ij}
+iabbrev Lji L_j^i
+iabbrev gij g_{ij}
+iabbrev glk g^{\ell k}
+
+iabbrev \wlog\ without loss of generality
+iabbrev \Wlog\ Without loss of generality
+
+iabbrev \glk\ g^{\ell k}
+
+" iabbrev \img\ \begin{center}	\\includegraphics[width=\\textwidth]{./img/}\\end{center}
+
 " visual and operator commands for tex items
 " visual am and im  to mimic a( and i(
 " Does not work with \(\) (empty math strings)
@@ -86,6 +108,7 @@ nnoremap <leader>bp o\begin{boxProblem}{}<CR>\end{boxProblem}<esc>k$
 nnoremap <leader>bo o\begin{boxTODO}{}<CR>\end{boxTODO}<esc>k$
 nnoremap <leader>bn o\begin{boxNote}{}<CR>\end{boxNote}<esc>k$
 nnoremap <leader>bq o\begin{boxQuote}{}<CR>\end{boxQuote}<esc>k$
+nnoremap <leader>br o\begin{boxResource}{}<CR>\end{boxResource}<esc>k$
 
 "Problems
 nnoremap <leader>pf o\begin{newProblem}{}<CR>\end{newProblem}<esc>k$
