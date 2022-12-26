@@ -18,11 +18,14 @@ bdfr                            python3 -m pip install bdfr --upgrade
 transmission                    https://cli-ck.io/transmission-cli-user-guide/
 nethogs
 
+openscad
+
 
 sshfd
 nnn
 
 plex server
+qbittorrent-nox
 
 dirdiff
 rdiff-backup
