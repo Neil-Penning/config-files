@@ -108,11 +108,13 @@ vnoremap <leader>s[ c[]<esc>P
 vnoremap <leader>s{ c{}<esc>P
 vnoremap <leader>s< c<lt>><esc>P
 vnoremap <leader>s' c''<esc>P
+vnoremap <leader>s` c``<esc>P
 vnoremap <leader>s\' s\'\'<esc>hP
 vnoremap <leader>s" c""<esc>P
 vnoremap <leader>s\" s\"\"<esc>hP
 vnoremap <leader>s<space> c  <esc>P
 
+nmap <leader>s` v<leader>s`
 nmap <leader>s( v<leader>s(
 nmap <leader>s[ v<leader>s[
 nmap <leader>s{ v<leader>s{
@@ -170,7 +172,7 @@ nnoremap * :set hlsearch<cr>*
 nnoremap <leader>h :noh<cr>
 
 "clear errorformat
-set efm=
+"set efm=
 
 
 " ignore the following filetypes when using vim's wild tab complete
