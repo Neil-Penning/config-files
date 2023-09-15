@@ -1,0 +1,16 @@
+# /Users/np/.config/tmuxinator/0000hw.yml
+
+name: 0000hw
+root: ~/Documents/LaTeX/GT-MATH-0000/Exercises
+
+startup_window: run
+
+windows:
+    - editor: vim ./GT-MATH-0000-HW.tex $({ find tex -maxdepth 1 && find opt_tex -maxdepth 1; } | grep \\.tex$ | grep -v raw | sort -t "/" -k 2 | tr "\n" " ") $({ find tex && find opt_tex; } | grep \\.tex$ | xargs -I % sh -c "if grep -qF UNFINISHED %; then echo %; fi" | sort -t "/" -k 2 | tr "\n" " ")
+    - run:
+        layout: even-horizontal
+        panes:
+            - git status
+            - runtex -po ./GT-MATH-0000-HW
+    - pbl: vim Problems.pbl
+
