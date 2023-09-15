@@ -116,6 +116,7 @@ fi
         vcp ./vim/ftplugin/java.vim     ~/.vim/ftplugin/java.vim
         vcp ./vim/ftplugin/sh.vim       ~/.vim/ftplugin/sh.vim
         vcp ./vim/ftplugin/vim.vim      ~/.vim/ftplugin/vim.vim
+        vcp ./vim/ftplugin/markdown.vim      ~/.vim/ftplugin/markdown.vim
     #syntax
         # make vim syntax directory if it doesn't exist
         vmkdir "$HOME/.vim/syntax/"
