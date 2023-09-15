@@ -30,6 +30,11 @@ export PATH="/opt/homebrew/bin/:$PATH"
 export PATH="/Applications/SageMath-9.2.app/:$PATH"
 #Add user applications to path
 export PATH="$HOME/Applications/:$PATH"
+#Add Mac OS Local to path
+export PATH=/Users/np/.local/bin:$PATH
+#Add cargo for rust to path
+export PATH=/Users/np/.cargo/bin:$PATH
+
 
 export JUNIT_HOME="/Applications/junit4.10"
 export CLASSPATH=$CLASSPATH.:$JUNIT_HOME/junit-4.10.jar
