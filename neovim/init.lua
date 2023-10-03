@@ -1,0 +1,5 @@
+require("np.np")
+require("np.remap")
+require("plugins")
+vim.cmd('colorscheme poimandres')
+-- print("hello")

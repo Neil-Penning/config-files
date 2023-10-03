@@ -1,3 +1,4 @@
 os.txt
 *.swp
 .DS_Store
+./neovim/plugin/*
