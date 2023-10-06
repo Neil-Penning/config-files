@@ -9,17 +9,30 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
---[[
+-- Turn on hlsearch when necessary
+vim.keymap.set('n', '/' , ':set hlsearch<cr>/')
+vim.keymap.set('n', '?' , ':set hlsearch<cr>?')
+vim.keymap.set('n', 'n' , ':set hlsearch<cr>n')
+vim.keymap.set('n', 'N' , ':set hlsearch<cr>N')
+vim.keymap.set('n', '*' , ':set hlsearch<cr>*')
+-- turn hlsearch off
+vim.keymap.set('n', '<leader>h', ':noh<cr>')
+
+
 -- https://superuser.com/a/1096361
 -- Add shift+h, shift+l to move between tabs
-nnoremap H :bp<cr>
-nnoremap L :bn<cr>
+vim.keymap.set('n', 'H', ':bp<cr>')
+vim.keymap.set('n', 'L', ':bn<cr>')
+--
+-- exit insert mode with jk
+vim.keymap.set('i', 'jk', 'esc');
 
--- Use Y for y$ instead of yy
--- This reflects how C and D work.
-nnoremap Y y$
 
-
+-- use q; for q: - (removes shift)
+vim.keymap.set('n', 'q;', 'q:')
+-- if you're in commandline mode, ;; runs <C-f> to go into history mode
+vim.keymap.set('c', ';;', '<C-f>')
+--[[
 -- run the current line as a vim command
 -- nnoremap <leader>v yy:silent @"<cr>:echo "ran current line (".line(".").") as vim command"<CR>
 -- run the current visual selection as a vim command
@@ -90,23 +103,5 @@ vnoremap <leader>= s<C-r>=<C-r>"<cr><esc>
 -- vnoremap <leader>rs "ss<C-r>=system('/Applications/SageMath-9.2.app/sage -c "print(<C-r>s)"')<cr>
 vnoremap <leader>rs "ax:call writefile(getreg('a',1,1), "./.tmp.sage") <bar> put =system('/Applications/SageMath-9.2.app/sage .tmp.sage && rm .tmp.sage && rm .tmp.sage.py')<cr>
 
--- exit insert mode with jk
-inoremap jk <esc>
 
--- use q; for q: - (removes shift)
-nnoremap q; q:
--- if you're in commandline mode, ;; runs <C-f> to go into history mode
-cnoremap ;; <C-f>
-
--- exit current buffer
-nnoremap Q :bd<CR>
-
--- set hlsearch on when relevent (rest is mine)
-nnoremap / :set hlsearch<cr>/
-nnoremap ? :set hlsearch<cr>?
-nnoremap n :set hlsearch<cr>n
-nnoremap N :set hlsearch<cr>N
-nnoremap * :set hlsearch<cr>*
--- turn hlsearch off
-nnoremap <leader>h :noh<cr>
 --]]
